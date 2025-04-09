@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scitronic Solutions - Professional IT Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#131313",
+              secondary: "#2A2A2A",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet"/>
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--Icons-->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!--Email js-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "Rg21DRAmqQJY0VK8z",
+          });
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-gray-900">
+    <nav class="bg-white shadow-md py-3 px-3 sm:px-3 sm:py-1 sticky-element">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="text-2xl font-['Pacifico']">Scitronic</a>
+
+        <!-- Menu Links (Desktop) -->
+        <div class="hidden md:flex space-x-8">
+          <div class="container_nav_items">
+            <div class=" relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a  href="index.html" target="_self">Home</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="./Services/index.html" target="_self">Services</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="./Products/index.html" target="_self">Products</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="./Aboutus/index.html" target="_self">About Us</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="./Contactus/index.html" target="_self">Contact Us</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="hidden md:flex items-center">
+          <!-- Phone Number -->
+          <div class="flex items-center space-x-2">
+            <i class="ri-phone-line"></i>
+            <span class="text-gray-800 font-medium">+91 98734 32597</span>
+          </div>
+          <button
+            style="border: 1px solid rgba(0, 0, 0, 0.127); width: 300px"
+            onclick="openQuoteModal1()"
+            class="button_home_Explore small_quote_button"
+          >
+            Request Quote <i class="fa-regular fa-calendar-check"></i>
+          </button>
+
+          <div
+          id="quoteModal1"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center"
+        >
+          <div class="bg-white w-half max-w-10xl mx-1 container_reqQuote">
+            <div class="flex justify-between items-center px-6 py-4 border-b">
+              <h3 class="text-xl font-semibold text-gray-900">Request a Quote</h3>
+              <button onclick="closeQuoteModal1()" class="text-gray-500 hover:text-gray-700">
+                <i class="ri-close-line text-2xl"></i>
+              </button>
+            </div>
+            <form id="quoteForm_desktop" class="p-6" onsubmit="return sendQuote1(event)">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Service/Product*</label>
+                <div class="relative">
+                  <select
+                    id="quote1_service"
+                    name="quote1_service"
+                    required
+                    class="w-full pl-4 pr-10 py-2 border border-gray-200 rounded-button appearance-none bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">Select a service or product</option>
+                    <option value="desktop_sales">Desktop Sales</option>
+                    <option value="laptop_sales">Laptop Sales</option>
+                    <option value="repair">Repair Services</option>
+                    <option value="data_recovery">Data Recovery</option>
+                    <option value="server_maintenance">Server Maintenance</option>
+                    <option value="network_solutions">Network Solutions</option>
+                    <option value="cloud_services">Cloud Services</option>
+                  </select>
+                  <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                  </div>
+                </div>
+              </div>
+        
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Project Requirements*</label>
+                <textarea
+                  id="quote1_requirements"
+                  name="quote1_requirements"
+                  required
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Please describe your project requirements..."
+                ></textarea>
+              </div>
+        
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Budget Range*</label>
+                <div class="relative">
+                  <select
+                    id="quote1_budget"
+                    name="quote1_budget"
+                    required
+                    class="w-full pl-4 pr-10 py-2 border border-gray-200 rounded-button appearance-none bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">Select budget range</option>
+                    <option value="0-1000">$0 - $1,000</option>
+                    <option value="1000-5000">$1,000 - $5,000</option>
+                    <option value="5000-10000">$5,000 - $10,000</option>
+                    <option value="10000+">$10,000+</option>
+                  </select>
+                  <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                  </div>
+                </div>
+              </div>
+        
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Timeline*</label>
+                <input
+                  id="quote1_timeline"
+                  name="quote1_timeline"
+                  required
+                  type="date"
+                  min="2025-03-26"
+                  class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+        
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Full Name*</label>
+                  <input
+                    id="quote1_name"
+                    name="quote1_name"
+                    required
+                    type="text"
+                    class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Email*</label>
+                  <input
+                    id="quote1_email"
+                    name="quote1_email"
+                    required
+                    type="email"
+                    class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+              </div>
+        
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number*</label>
+                <input
+                  id="quote1_phone"
+                  name="quote1_phone"
+                  required
+                  type="number"
+                  placeholder="Enter your active contact number"
+                  class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+        
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-4">Preferred Contact Method*</label>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input
+                      required
+                      type="radio"
+                      name="quote1_contact_method"
+                      value="email"
+                      class="w-4 h-4 text-primary"
+                    />
+                    <span class="ml-2 text-gray-700">Email</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      name="quote1_contact_method"
+                      value="phone"
+                      class="w-4 h-4 text-primary"
+                    />
+                    <span class="ml-2 text-gray-700">Phone</span>
+                  </label>
+                </div>
+              </div>
+        
+              <div class="flex justify-end space-x-4 pt-4 border-t">
+                <button
+                  type="button"
+                  onclick="closeQuoteModal1()"
+                  class="button_home_Explore"
+                  style="border: 1px solid rgba(0, 0, 0, 0.127);"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  style="border: 1px solid rgba(0, 0, 0, 0.127); width: 300px;font-size:14px;"
+                  class="button_home_Explore small_quote_button"
+                >
+                  Submit Quote Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+          <!-- Request Quote Button -->
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Hidden by Default) -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex flex-col px-2 pb-4 bg-white shadow-md"
+      >
+        <a class="" href="./Services/index.html" class="text-gray-700 sm_dev_smallItems">Services</a>
+        <a class="" href="./Products/index.html" class="text-gray-700 sm_dev_smallItems">Products</a>
+        <a class="" href="./Aboutus/index.html" class="text-gray-700 sm_dev_smallItems">About Us</a>
+        <a class="" href="./Contactus/index.html" class="text-gray-700 sm_dev_smallItems">Contact Us</a>
+        <button
+          style="border: 1px solid rgba(0, 0, 0, 0.127); width: 300px"
+          onclick="openQuoteModal2()"
+          class="button_home_Explore small_quote_button"
+        >
+          Get Estimate <i class="fa-regular fa-calendar-check"></i>
+        </button>
+
+        <!-- MODIFIED HTML WITH UNIQUE IDS -->
+        <div
+        id="quoteModal2"
+        class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center"
+        >
+        <div
+          class="bg-white w-full max-w-3xl mx-4 md:w-half md:max-w-10xl rounded-lg shadow-lg overflow-hidden"
+        >
+          <div class="max-h-[90vh] overflow-y-auto p-4 text-xs">
+            <div class="flex justify-between items-center px-4 py-3 border-b">
+              <h3 class="text-sm font-semibold text-gray-900">Request a Quote</h3>
+              <button onclick="closeQuoteModal2()" class="text-gray-500 hover:text-gray-700">
+                <i class="ri-close-line text-lg"></i>
+              </button>
+            </div>
+            <form id="quoteForm_mobile" class="p-4 space-y-3" onsubmit="return sendQuote2(event)">
+              <div>
+                <label class="block font-medium text-gray-700 mb-1">Service/Product*</label>
+                <select id="quote2_service" required class="w-full pl-3 pr-8 py-1 border border-gray-200 rounded-xs bg-white text-gray-900 text-xs">
+                  <option value="">Select a service or product</option>
+                  <option value="desktop_sales">Desktop Sales</option>
+                  <option value="laptop_sales">Laptop Sales</option>
+                  <option value="repair">Repair Services</option>
+                  <option value="data_recovery">Data Recovery</option>
+                  <option value="server_maintenance">Server Maintenance</option>
+                  <option value="network_solutions">Network Solutions</option>
+                  <option value="cloud_services">Cloud Services</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-medium text-gray-700 mb-1">Project Requirements*</label>
+                <textarea id="quote2_requirements" required rows="3" class="w-full px-3 py-1 border border-gray-200 rounded-xs text-xs" placeholder="Describe your project requirements..."></textarea>
+              </div>
+              <div>
+                <label class="block font-medium text-gray-700 mb-1">Budget Range*</label>
+                <select id="quote2_budget" required class="w-full pl-3 pr-8 py-1 border border-gray-200 rounded-md bg-white text-gray-900 text-xs">
+                  <option value="">Select budget range</option>
+                  <option value="0-1000">₹10,000 - ₹20,000</option>
+                  <option value="1000-5000">₹20,000 - ₹30,000</option>
+                  <option value="5000-10000">₹40,000 - ₹50,000</option>
+                  <option value="10000+">₹50,000+</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-medium text-gray-700 mb-1">Preferred Timeline*</label>
+                <input id="quote2_timeline" required type="date" min="2025-03-26" class="w-full px-3 py-1 border border-gray-200 rounded-xs text-xs" />
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div>
+                  <label class="block font-medium text-gray-700 mb-1">Full Name*</label>
+                  <input id="quote2_name" required type="text" class="w-full px-3 py-1 border border-gray-200 rounded-xs text-xs" />
+                </div>
+                <div>
+                  <label class="block font-medium text-gray-700 mb-1">Email*</label>
+                  <input id="quote2_email" required type="email" class="w-full px-3 py-1 border border-gray-200 rounded-xs text-xs" />
+                </div>
+              </div>
+              <div>
+                <label class="block font-medium text-gray-700 mb-1">Phone Number*</label>
+                <input id="quote2_phone" required type="number" placeholder="Enter your contact number" class="w-full px-3 py-1 border border-gray-200 rounded-xs text-xs" />
+              </div>
+              <div>
+                <label class="block font-medium text-gray-700 mb-2">Preferred Contact Method*</label>
+                <div class="space-y-1">
+                  <label class="flex items-center">
+                    <input required type="radio" name="quote2_contact_method" value="email" class="w-3 h-3 text-primary" />
+                    <span class="ml-2 text-gray-700 text-xs">Email</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="radio" name="quote2_contact_method" value="phone" class="w-3 h-3 text-primary" />
+                    <span class="ml-2 text-gray-700 text-xs">Phone</span>
+                  </label>
+                </div>
+              </div>
+              <div class="flex justify-end space-x-3 pt-3 border-t">
+                <button type="button" onclick="closeQuoteModal2()" class="smallSubmit_Button">Cancel</button>
+                <button type="submit" class="smallSubmit_Button">Submit Quote Request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <section class="relative h-[670px] overflow-hidden">
+      <div
+        class="absolute background_container_home_main inset-0 bg-cover bg-center"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"
+      ></div>
+      <div class="container mx-auto px-3 sm:px-6 relative h-full">
+        <div class="flex items-center h-full max-w-2xl text-white">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+              Best IT Solutions Partner In Whole Coimbatore
+            </h1>
+            <p class="text-0xl sm:text-xl mb-8">
+              Delivering precision in chip-level services and IT support. From device repair to network security, we ensure reliable solutions that empower your business.
+            </p>
+            <div class="flex flex-wrap justify-center ">
+              <a href="./Services/index.html">
+                <button
+                  class="button_home_Explore exploreButton_sm"
+                >
+                  Explore Services
+                </button>
+              </a>
+              <button
+                onclick="scrollToContact()"
+                class="button_home_Explore button_2_home"
+              >
+                Book a Consultant
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-2 sm:px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl  headingPart2_main mb-4">
+            Our Premium Services
+          </h2>
+          <p class="text-gray-600 text-xs max-w-2xl mx-auto">
+            Discover our comprehensive range of IT solutions designed to meet
+            your technology needs with unparalleled expertise and customer
+            service.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div
+            class="service-card animationScrollEffect bg-white mx-3  p-3 sm:p-8 rounded-lg shadow-lg transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 container_p2_home_servIcon rounded-full flex items-center justify-center mb-4 sm:mb-6"
+            >
+              <i class="ri-computer-line text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class=" text-base sm:text-xl font-semibold mb-2 sm:mb-4">Desktop & Laptop Sales</h3>
+            <p class="text-xs sm:text-base text-gray-500 mb-2 sm:mb-4">
+              New and certified refurbished computers from leading brands,
+              customized to your specifications.
+            </p>
+            <a
+              href="./Services/index.html"
+              class="text-primary font-medium hover:underline flex items-center"
+            >
+              Learn More
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+          <div
+            class="service-card animationScrollEffect bg-white mx-3  p-3 sm:p-8 rounded-lg shadow-lg transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 container_p2_home_servIcon rounded-full flex items-center justify-center mb-4 sm:mb-6"
+            >
+              <i class="ri-tools-line text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class=" text-base sm:text-xl font-semibold mb-2 sm:mb-4">Repair Services</h3>
+            <p class="text-xs sm:text-base text-gray-500 mb-2 sm:mb-4">
+              
+              Expert repair services for all brands of desktops, laptops, and
+              motherboards with quick turnaround time.
+            </p>
+            <a
+              href="./Services/index.html"
+              class="text-primary font-medium hover:underline flex items-center"
+            >
+              Learn More
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+          <div
+            class="service-card animationScrollEffect bg-white mx-3  p-3 sm:p-8 rounded-lg shadow-lg transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 container_p2_home_servIcon rounded-full flex items-center justify-center mb-4 sm:mb-6"
+            >
+              <i class="ri-hard-drive-line text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class=" text-base sm:text-xl font-semibold mb-2 sm:mb-4">Data Recovery</h3>
+            <p class="text-xs sm:text-base text-gray-500 mb-2 sm:mb-4">
+              Professional data recovery services for all storage devices with
+              guaranteed results.
+            </p>
+            <a
+              href="./Services/index.html"
+              class="text-primary font-medium hover:underline flex items-center"
+            >
+              Learn More
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+          
+          <div class=" transition-all duration-100">
+            <a href="./Services/index.html">
+          <button
+            class="button_home_Explore widerButton "
+          >
+              Explore More services
+                </button>
+              </div></a>
+        </div>
+      </div>
+    </section>
+    <section class="container_feauturedProducrsSec">
+      <div class="container container_feautureProd mx-auto px-2 sm:px-8 py-2 sm:py-6">
+        <div class="text-center mb-5 sm:mb-16">
+          <h2 class="heading_feat_produ text-3xl sm:text-5xl mb-2 sm:mb-4 ">
+            Featured Products
+          </h2>
+          <p class="text-gray-600 text-xs sm:text-base max-w-2xl mx-auto ">
+            Browse our selection of premium computers and accessories, carefully
+            curated for quality and performance.
+          </p>
+        </div>
+        <div class="container_products_scroll_container animationScrollEffect" id="feautureProductsContainer">
+          <!-- 4K Monitor -->
+          <div class="product-card bg-white p-1 sm:p-3 shadow-lg overflow-hidden" id="productsCard">
+            <img src="./assets/FeauturedProcuts_images/Feauture_card3.jpeg" alt="4K Monitor" class="w-full image_feautureProduts" />
+            <div class="p-2 sm:p-3">
+              <h1 class="font_card_headingProd text-lg sm:text-lg font-semibold text-sm sm:text-base sm:mb-2 w-fit">Ultra HD 4K Monitor</h1>
+              <p class="font_card_paraProd text-gray-400 text-xs sm:text-sm mb-4 w-fit">32-inch, IPS Display, 144Hz</p>
+              <div class="flex justify-between items-center">
+                <span class="font_rate_prod text-primary text-xs sm:text-base font-bold">₹41,499</span>
+                <a href="./Contactus/index.html#booknow"><button class="bg-primary button_prod_viewdetail text-white px-4 py-2 rounded-button text-xs sm:text-sm hover:bg-primary/90">Order Now  <i class="ri-shopping-cart-2-line text-white text-xs sm:text-base"></i> </button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mechanical Keyboard -->
+          <div class="product-card bg-white p-1 sm:p-3 shadow-lg overflow-hidden" id="productsCard">
+            <img src="./assets/FeauturedProcuts_images/Feauture_card4.jpeg" alt="Mechanical Keyboard" class="w-full image_feautureProduts" />
+            <div class="p-2 sm:p-3 ">
+              <h1 class="font_card_headingProd text-2xs sm:text-lg font-semibold text-sm sm:text-base sm:mb-2 w-fit">RGB Mechanical Keyboard</h1>
+              <p class="font_card_paraProd text-gray-400 text-xs sm:text-sm mb-4 w-fit">Cherry MX Switches, Custom RGB</p>
+              <div class="flex justify-between items-center">
+                <span class="font_rate_prod text-primary text-xs sm:text-base font-bold">₹10,799</span>
+                <a href="./Contactus/index.html#booknow"><button class="bg-primary button_prod_viewdetail text-white px-4 py-2 rounded-button text-xs sm:text-sm hover:bg-primary/90">Order Now  <i class="ri-shopping-cart-2-line text-white text-xs sm:text-base"></i> </button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gaming Mouse -->
+          <div class="product-card bg-white p-1 sm:p-3 shadow-lg overflow-hidden" id="productsCard">
+            <img src="./assets/FeauturedProcuts_images/Feauture_card5.jpg" alt="Gaming Mouse" class="w-full image_feautureProduts" />
+            <div class="p-2 sm:p-3 ">
+              <h1 class="font_card_headingProd text-2xs sm:text-lg font-semibold text-sm sm:text-base sm:mb-2 w-fit">Wireless Gaming Mouse</h1>
+              <p class="font_card_paraProd text-gray-400 text-xs sm:text-sm mb-4 w-fit">High DPI, 6 Programmable Buttons</p>
+              <div class="flex justify-between items-center">
+                <span class="font_rate_prod text-primary text-xs sm:text-base font-bold">₹6,639</span>
+                <a href="./Contactus/index.html#booknow"><button class="bg-primary button_prod_viewdetail text-white px-4 py-2 rounded-button text-xs sm:text-sm hover:bg-primary/90">Order Now  <i class="ri-shopping-cart-2-line text-white text-xs sm:text-base"></i> </button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CCTV System -->
+          <div class="product-card bg-white p-1 sm:p-3 shadow-lg overflow-hidden animationScrollEffect" id="productsCard">
+            <img src="./assets/FeauturedProcuts_images/Feauture_card6.jpeg" alt="CCTV System" class="w-full image_feautureProduts" />
+            <div class="p-2 sm:p-3 ">
+              <h1 class="font_card_headingProd text-2xs sm:text-lg font-semibold text-sm sm:text-base sm:mb-2 w-fit">Advanced CCTV Security System</h1>
+              <p class="font_card_paraProd text-gray-400 text-xs sm:text-sm mb-4 w-fit">4K Resolution, Night Vision</p>
+              <div class="flex justify-between items-center">
+                <span class="font_rate_prod text-primary text-xs sm:text-base font-bold">₹20,749</span>
+                <a href="./Contactus/index.html#booknow"><button class="bg-primary button_prod_viewdetail text-white px-4 py-2 rounded-button text-xs sm:text-sm hover:bg-primary/90">Order Now  <i class="ri-shopping-cart-2-line text-white text-xs sm:text-base"></i> </button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Server Maintenance Kit -->
+          <div class="product-card bg-white p-1 sm:p-3 shadow-lg overflow-hidden animationScrollEffect" id="productsCard">
+            <img src="./assets/FeauturedProcuts_images/Feauture_card7.jpg" alt="Server Kit" class="w-full image_feautureProduts" />
+            <div class="p-2 sm:p-3 ">
+              <h1 class="font_card_headingProd sm:text-lg font-semibold text-sm sm:text-base sm:mb-2 w-fit">Professional Server Maintenance Kit</h1>
+              <p class="font_card_paraProd text-gray-400 text-xs sm:text-sm mb-1 w-fit">Cooling Fans, Power Supply, Diagnostic Tools</p>
+              <div class="flex justify-between items-center">
+                <span class="font_rate_prod text-primary text-xs sm:text-base font-bold">₹12,449</span>
+                <a href="./Contactus/index.html#booknow"><button class="bg-primary button_prod_viewdetail text-white px-4 py-2 rounded-button text-xs sm:text-sm hover:bg-primary/90">Order Now  <i class="ri-shopping-cart-2-line text-white text-xs sm:text-base"></i> </button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recovery Tool -->
+          <div class="product-card bg-white p-1 sm:p-3 shadow-lg overflow-hidden animationScrollEffect" id="productsCard">
+            <img src="./assets/FeauturedProcuts_images/Feauture_card8.jpg" alt="Recovery Tool" class="w-full image_feautureProduts" />
+            <div class="p-2 sm:p-3 ">
+              <h1 class="font_card_headingProd text-2xs sm:text-lg font-semibold text-sm sm:text-base sm:mb-2 w-fit">Portable Hard Disk Recovery Tool</h1>
+              <p class="font_card_paraProd text-gray-400 text-xs sm:text-sm mb-4 w-fit">2TB, Encrypted Data Recovery</p>
+              <div class="flex justify-between items-center">
+                <span class="font_rate_prod text-primary text-xs sm:text-base font-bold">₹8,299</span>
+                <a href="./Contactus/index.html#booknow"><button class="bg-primary button_prod_viewdetail text-white px-4 py-2 rounded-button text-xs sm:text-sm hover:bg-primary/90">Order Now  <i class="ri-shopping-cart-2-line text-white text-xs sm:text-base"></i> </button></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- External SSD -->
+          <div class="product-card bg-white p-1 sm:p-3 shadow-lg overflow-hidden animationScrollEffect" id="productsCard">
+            <img src="./assets/FeauturedProcuts_images/Feauture_card9.jpeg" alt="External SSD" class="w-full image_feautureProduts" />
+            <div class="p-2 sm:p-3">
+              <h1 class="font_card_headingProd text-sm sm:text-lg font-semibold text-sm sm:text-base sm:mb-2 w-fit">High-Speed External SSD</h1>
+              <p class="font_card_paraProd text-gray-400 text-xs sm:text-sm mb-4 w-fit">Capacity: 1TB, 2TB & upto 10TB</p>
+              <div class="flex justify-between items-center">
+                <span class="font_rate_prod text-primary text-xs sm:text-base font-bold">₹83,000</span>
+                <a href="./Contactus/index.html#booknow"><button class="bg-primary button_prod_viewdetail text-white px-4 py-2 rounded-button text-xs sm:text-sm hover:bg-primary/90">Order Now  <i class="ri-shopping-cart-2-line text-white text-xs sm:text-base"></i> </button></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <a href="./Products/index.html"><button class="button_home_Explore viewMoreProdButton">View More Products</button></a>
+ <!-- More product cards... -->
+    </section>
+
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-2xl sm:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose Scitronic Solutions?
+            </h2>
+            <div class="space-y-0 sm:space-y-6">
+              <div class="flex items-start animationScrollEffect">
+                <div
+                  class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-medal-line text-primary text-base sm:text-2xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-base sm:text-xl font-semibold mb-2">
+                    Best IT Services in Coimbatore
+                  </h3>
+                  <p class="text-xs sm:text-base text-gray-400">
+                    Trusted by Coimbatore clients for expert service and lasting solutions
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start animationScrollEffect">
+                <div
+                  class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i
+                    class="ri-customer-service-2-line text-primary text-base sm:text-2xl"
+                  ></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-base sm:text-xl font-semibold mb-2">24/7 Support</h3>
+                  <p class="text-xs sm:text-base text-gray-400">
+                    Round-the-clock technical support to ensure your business
+                    never stops.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start animationScrollEffect">
+                <div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+
+                  <i class="ri-shield-check-line text-primary text-base sm:text-2xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-base sm:text-xl font-semibold mb-2">Quality Guarantee</h3>
+                  <p class="text-xs sm:text-base text-gray-400">
+                    We stand behind our work with comprehensive warranties and
+                    guarantees.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animationScrollEffect">
+            <img
+              src="./assets/wcuImage.jpg"
+              alt="IT Professional"
+              class="rounded-lg shadow-lg animationScrollEffect"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contact" >
+      <div class="container">
+        <div class="container_bookNow ">
+              <div class="orderCard1_home_bkNow animationScrollEffect">
+                <img src="./assets/book_img.jpg" class="image_bookNow"/> 
+                <!--
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
+                >
+                  <i class="ri-phone-line text-primary text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold">Phone</h3>
+                  <p class="text-gray-400">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
+                >
+                  <i class="ri-mail-line text-primary text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold">Email</h3>
+                  <p class="text-gray-400">support@scitronic.com</p>
+                </div>
+              </div>-->
+              </div>
+              <div class="orderCard2_home_bkNow">
+                <form class="bg-white form_book_now rounded-md overflow-hidden shadow-lg p-4" style="box-shadow:0px 40px 59px -35px black;">
+                  <div class="mb-6">
+                    <h1 class="text-2xl sm:text-5xl heading_book_now">Book a Call </h1>
+                    <div class="mb-2">
+                      <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        class="w-full px-4 py-2 border shadow-lg rounded-button rounded-sm focus:bg-black focus:outline-none focus:text-white"
+                      />
+                    </div>
+                    <div class="mb-2">
+                      <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                        >Last Name</label
+                      >
+                      <input
+                        type="text"
+                        class="w-full px-4 py-2 border shadow-lg rounded-button rounded-sm focus:bg-black focus:outline-none focus:text-white inputHome_bknow"
+                      />
+                    </div>
+                  <div class="mb-2">
+                    <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="w-full px-4 py-2 border shadow-lg rounded-button rounded-sm focus:bg-black focus:outline-none focus:text-white "
+                    />
+                    
+                  </div>
+                  <div class="mb-6">
+                    <label class="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                      >Message</label
+                    >
+                    <textarea
+                      rows="4"
+                      class="w-full px-4 py-2 border shadow-lg border-gray-200 bg-white text-gray-900 focus:outline-none rounded-sm focus:bg-black focus:outline-none focus:text-white"
+                    ></textarea>
+                  </div>
+                  <button
+                    class="w-full button_home_Explore"
+                    style="border: 1px sold rgba(0, 0, 0, 0.827);box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px -20px;"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      
+      <!-- Logo & Description -->
+      <div>
+        <a href="index.html" target="_self" class="text-xl sm:text-2xl font-['Pacifico'] mb-4 sm:mb-6 block">
+          Scitronic
+        </a>
+        <p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">
+          Your trusted partner for comprehensive IT solutions and services.
+        </p>
+        <div class="flex space-x-3 sm:space-x-4">
+          <a href="https://www.facebook.com/www.scitronic.co.in" target="_blank" class="hover:text-gray-200">
+            <i class="ri-facebook-fill text-lg sm:text-xl"></i>
+          </a>
+          <a href="https://wa.me/+919944825594" class="hover:text-gray-200">
+            <i class="ri-whatsapp-fill text-lg sm:text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/scitronic/" target="_blank" class="hover:text-gray-200">
+            <i class="ri-linkedin-fill text-lg sm:text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h3>
+        <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+          <li><a href="./Aboutus/index.html" class="text-gray-300 hover:text-white">About Us</a></li>
+          <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Services</a></li>
+          <li><a href="./Products/index.html" class="text-gray-300 hover:text-white">Products</a></li>
+          <li><a href="./Contactus/index.html" class="text-gray-300 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Services</h3>
+        <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+          <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Computer Sales</a></li>
+          <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Repair Services</a></li>
+          <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Data Recovery</a></li>
+          <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Server Maintenance</a></li>
+        </ul>
+      </div>
+
+      <!-- Business Hours -->
+      <div>
+        <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Business Hours</h3>
+        <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-300">
+          <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+          <li>Saturday: 10:00 AM - 4:00 PM</li>
+          <li>Sunday: Closed</li>
+          <li class="text-white font-medium mt-3 sm:mt-4">24/7 Emergency Support Available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-white/10">
+    <div class="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+      <div class="flex flex-col md:flex-row justify-center items-center">
+        <p class="text-xs sm:text-sm text-gray-300 text-center">
+          © 2025 Scitronic Solutions. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

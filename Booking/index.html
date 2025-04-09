@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scitronic Solutions - Professional IT Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          xtend: {
+            colors: { primary: "#0F07CE", secondary: "#4F46E5" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet"/>
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--Icons-->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+  </head>
+  <body>
+    <nav class="bg-white shadow-md py-3" id="sticky-element">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+          <!-- Logo -->
+          <a href="index.html" class="text-2xl font-['Pacifico']">Scitronic</a>
+  
+          <!-- Menu Links (Desktop) -->
+          <div class="hidden md:flex space-x-8">
+            <div class="container_nav_items">
+              <div class=" relative">
+                <button class="flex items-center space-x-1 cursor-pointer">
+                  <a  href="index.html" target="_self">Home</a>
+                </button>
+              </div>
+              <div class="nav-item relative">
+                <button class="flex items-center space-x-1 cursor-pointer">
+                  <a href="./Services/index.html" target="_self">Services</a>
+                </button>
+              </div>
+              <div class="nav-item relative">
+                <button class="flex items-center space-x-1 cursor-pointer">
+                  <a href="./Products/index.html" target="_self">Products</a>
+                </button>
+              </div>
+              <div class="nav-item relative">
+                <button class="flex items-center space-x-1 cursor-pointer">
+                  <a href="./Aboutus/index.html" target="_self">About Us</a>
+                </button>
+              </div>
+              <div class="nav-item relative">
+                <button class="flex items-center space-x-1 cursor-pointer">
+                  <a href="./Contactus/index.html" target="_self">Contact Us</a>
+                </button>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Right Section -->
+          <div class="hidden md:flex items-center">
+            <!-- Phone Number -->
+            <div class="flex items-center space-x-2">
+              <i class="ri-phone-line"></i>
+              <span class="text-gray-800 font-medium">+91 98734 32597</span>
+            </div>
+  
+            <div
+              id="quoteModal1"
+              class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center"
+            >
+              <div class="bg-white w-half max-w-10xl mx-1 container_reqQuote">
+                <div class="flex justify-between items-center px-6 py-4 border-b">
+                  <h3 class="text-xl font-semibold text-gray-900">
+                    Request a Quote
+                  </h3>
+                  <button
+                    onclick="closeQuoteModal1()"
+                    class="text-gray-500 hover:text-gray-700"
+                  >
+                    <i class="ri-close-line text-2xl"></i>
+                  </button>
+                </div>
+                <form id="quoteForm" class="p-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Service/Product*</label
+                    >
+                    <div class="relative">
+                      <select
+                        required
+                        class="w-full pl-4 pr-10 py-2 border border-gray-200 rounded-button appearance-none bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
+                      >
+                        <option value="">Select a service or product</option>
+                        <option value="desktop_sales">Desktop Sales</option>
+                        <option value="laptop_sales">Laptop Sales</option>
+                        <option value="repair">Repair Services</option>
+                        <option value="data_recovery">Data Recovery</option>
+                        <option value="server_maintenance">
+                          Server Maintenance
+                        </option>
+                        <option value="network_solutions">
+                          Network Solutions
+                        </option>
+                        <option value="cloud_services">Cloud Services</option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                      >
+                        <i class="ri-arrow-down-s-line text-gray-400"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Project Requirements*</label
+                    >
+                    <textarea
+                      required
+                      rows="4"
+                      class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="Please describe your project requirements..."
+                    ></textarea>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Budget Range*</label
+                    >
+                    <div class="relative">
+                      <select
+                        required
+                        class="w-full pl-4 pr-10 py-2 border border-gray-200 rounded-button appearance-none bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
+                      >
+                        <option value="">Select budget range</option>
+                        <option value="0-1000">$0 - $1,000</option>
+                        <option value="1000-5000">$1,000 - $5,000</option>
+                        <option value="5000-10000">$5,000 - $10,000</option>
+                        <option value="10000+">$10,000+</option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                      >
+                        <i class="ri-arrow-down-s-line text-gray-400"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Preferred Timeline*</label
+                    >
+                    <input
+                      required
+                      type="date"
+                      min="2025-03-26"
+                      class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2"
+                        >Full Name*</label
+                      >
+                      <input
+                        required
+                        type="text"
+                        class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2"
+                        >Email*</label
+                      >
+                      <input
+                        required
+                        type="email"
+                        class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2"
+                      >Phone Number*</label
+                    >
+                    <input
+                      required
+                      type="number"
+                      placeholder="Enter your active contact number"
+                      class="w-full px-4 py-2 border border-gray-200 rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-4"
+                      >Preferred Contact Method*</label
+                    >
+                    <div class="space-y-2">
+                      <label class="flex items-center">
+                        <input
+                          required
+                          type="radio"
+                          name="contact_method"
+                          value="email"
+                          class="w-4 h-4 text-primary"
+                        />
+                        <span class="ml-2 text-gray-700">Email</span>
+                      </label>
+                      <label class="flex items-center">
+                        <input
+                          type="radio"
+                          name="contact_method"
+                          value="phone"
+                          class="w-4 h-4 text-primary"
+                        />
+                        <span class="ml-2 text-gray-700">Phone</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex justify-end space-x-4 pt-4 border-t">
+                    <button
+                      type="button"
+                      onclick="closeQuoteModal1()"
+                      class="button_home_Explore"
+                      style="border: 1px solid rgba(0, 0, 0, 0.127);"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      onclick="closeQuoteModal1()"
+                      style="border: 1px solid rgba(0, 0, 0, 0.127); width: 300px;font-size:14px;"
+                      class="button_home_Explore small_quote_button"
+                    >
+                      Submit Quote Request
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+  
+            <!-- Request Quote Button -->
+          </div>
+  
+        </div>
+  
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden flex flex-col px-4 pb-4 bg-white shadow-md"
+        >
+          <a class="nav-item" href="./Services/index.html" class="text-gray-700 sm_dev_smallItems">Services</a>
+          <a class="nav-item" href="./Products/index.html" class="text-gray-700 sm_dev_smallItems">Products</a>
+          <a class="nav-item" href="./Aboutus/index.html" class="text-gray-700 sm_dev_smallItems">About Us</a>
+          <a class="nav-item" href="./Contactus/index.html" class="text-gray-700 sm_dev_smallItems">Contact Us</a>
+          
+        </div>
+      </nav>
+
+    <main class="container mx-auto px-4 py-8 max-w-5xl">
+      <div class="mb-8 text-center">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Order Form</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Please complete the form below to place your order for our IT
+          solutions. Our team will review your requirements and contact you
+          within 24 hours.
+        </p>
+      </div>
+
+      <div class="mb-8" id="sticky-element2">
+        <div class="progress-bar mb-2 ">
+          <div class="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <div class="flex justify-between text-sm text-gray-500">
+          <span>Product Selection</span>
+          <span>Customer Information</span>
+          <span>Requirements</span>
+          <span>Review & Submit</span>
+        </div>
+      </div>
+
+      <form
+        id="orderForm"
+        class="bg-white shadow-md rounded-lg overflow-hidden"
+      >
+        <!-- Step 1: Product Selection -->
+        <div id="step1" class="p-6 border-b border-gray-200">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            1. Select Your IT Solution
+          </h2>
+
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-medium mb-2"
+              for="product"
+            >
+              Product/Service*
+            </label>
+            <div class="custom-select">
+              <select
+                id="product"
+                class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700 bg-white"
+                required
+              >
+                <option value="" disabled selected>
+                  Select a product or service
+                </option>
+                <option value="cloud-infrastructure">
+                  Cloud Infrastructure Management
+                </option>
+                <option value="cybersecurity">Cybersecurity Solutions</option>
+                <option value="data-analytics">Data Analytics Platform</option>
+                <option value="managed-services">Managed IT Services</option>
+                <option value="software-dev">
+                  Custom Software Development
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div
+            id="productDetails"
+            class="hidden bg-gray-50 p-4 rounded-md mb-6"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-2/3 pr-0 md:pr-4">
+                <h3
+                  id="productName"
+                  class="text-lg font-semibold text-gray-800 mb-2"
+                >
+                  Cloud Infrastructure Management
+                </h3>
+                <p id="productDescription" class="text-gray-600 mb-4">
+                  Comprehensive cloud infrastructure setup, optimization, and
+                  management services for businesses of all sizes. Includes 24/7
+                  monitoring, security, and maintenance.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Cloud Computing</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >AWS</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Azure</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                    >Google Cloud</span
+                  >
+                </div>
+              </div>
+              <div class="md:w-1/3 mt-4 md:mt-0">
+                <div class="bg-white p-4 rounded-md shadow-sm">
+                  <div class="mb-2">
+                    <span class="text-gray-600 text-sm">Starting from</span>
+                    <div
+                      class="text-2xl font-bold text-gray-900"
+                      id="productPrice"
+                    >
+                      $1,299.00
+                    </div>
+                    <span class="text-gray-500 text-sm" id="productDuration"
+                      >per month</span
+                    >
+                  </div>
+                  <div class="text-sm text-gray-600">
+                    <div class="flex items-center mb-1">
+                      <div
+                        class="w-4 h-4 flex items-center justify-center mr-2 text-primary"
+                      >
+                        <i class="ri-check-line"></i>
+                      </div>
+                      <span>Setup included</span>
+                    </div>
+                    <div class="flex items-center mb-1">
+                      <div
+                        class="w-4 h-4 flex items-center justify-center mr-2 text-primary"
+                      >
+                        <i class="ri-check-line"></i>
+                      </div>
+                      <span>24/7 Support</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div
+                        class="w-4 h-4 flex items-center justify-center mr-2 text-primary"
+                      >
+                        <i class="ri-check-line"></i>
+                      </div>
+                      <span>99.9% Uptime SLA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Customer Information -->
+        <div id="step2" class="hidden p-6 border-b border-gray-200">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            2. Customer Information
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-medium mb-2"
+                for="fullName"
+              >
+                Full Name*
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700"
+                required
+              />
+            </div>
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-medium mb-2"
+                for="companyName"
+              >
+                Company Name
+              </label>
+              <input
+                type="text"
+                id="companyName"
+                class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-medium mb-2"
+                for="email"
+              >
+                Email Address*
+              </label>
+              <input
+                type="email"
+                id="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700"
+                required
+              />
+            </div>
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-medium mb-2"
+                for="phone"
+              >
+                Phone Number*
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-medium mb-2"
+              for="address"
+            >
+              Business Address
+            </label>
+            <textarea
+              id="address"
+              rows="3"
+              class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700"
+            ></textarea>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-medium mb-2"
+                for="industry"
+              >
+                Industry
+              </label>
+              <div class="custom-select">
+                <select
+                  id="industry"
+                  class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700 bg-white"
+                >
+                  <option value="" disabled selected>
+                    Select your industry
+                  </option>
+                  <option value="finance">Finance & Banking</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="retail">Retail</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="education">Education</option>
+                  <option value="technology">Technology</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-medium mb-2"
+                for="users"
+              >
+                Number of Users/Licenses
+              </label>
+              <input
+                type="number"
+                id="users"
+                min="1"
+                class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700"
+                placeholder="e.g., 10"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Project Requirements -->
+        <div id="step3" class="hidden p-6 border-b border-gray-200">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            3. Project Requirements
+          </h2>
+
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-medium mb-2"
+              for="requirements"
+            >
+              Specific Requirements
+            </label>
+            <textarea
+              id="requirements"
+              rows="5"
+              class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700"
+              placeholder="Please describe your specific needs, challenges, or any other details that would help us understand your requirements better."
+            ></textarea>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-medium mb-2">
+              Additional Services
+            </label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div class="flex items-start">
+                <label class="custom-checkbox pl-7 text-gray-700">
+                  <input type="checkbox" value="training" />
+                  <span class="checkmark"></span>
+                  Staff Training
+                </label>
+              </div>
+              <div class="flex items-start">
+                <label class="custom-checkbox pl-7 text-gray-700">
+                  <input type="checkbox" value="migration" />
+                  <span class="checkmark"></span>
+                  Data Migration
+                </label>
+              </div>
+              <div class="flex items-start">
+                <label class="custom-checkbox pl-7 text-gray-700">
+                  <input type="checkbox" value="integration" />
+                  <span class="checkmark"></span>
+                  System Integration
+                </label>
+              </div>
+              <div class="flex items-start">
+                <label class="custom-checkbox pl-7 text-gray-700">
+                  <input type="checkbox" value="security" />
+                  <span class="checkmark"></span>
+                  Security Assessment
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-medium mb-2"
+              for="timeline"
+            >
+              Preferred Timeline
+            </label>
+            <div class="custom-select">
+              <select
+                id="timeline"
+                class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700 bg-white"
+              >
+                <option value="" disabled selected>
+                  Select your preferred timeline
+                </option>
+                <option value="immediate">Immediate (1-2 weeks)</option>
+                <option value="short">Short-term (1 month)</option>
+                <option value="medium">Medium-term (2-3 months)</option>
+                <option value="long">Long-term (3+ months)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-medium mb-2">
+              Upload Relevant Documents (optional)
+            </label>
+            <div class="file-upload flex items-center justify-center w-full">
+              <label
+                class="w-full flex flex-col items-center px-4 py-6 bg-white text-primary rounded-lg shadow-sm tracking-wide border border-dashed border-primary cursor-pointer hover:bg-primary hover:bg-opacity-5"
+              >
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-upload-cloud-line ri-xl"></i>
+                </div>
+                <span class="mt-2 text-base">Click to upload files</span>
+                <span class="text-xs text-gray-500 mt-1"
+                  >PDF, DOCX, XLSX (Max 10MB)</span
+                >
+                <input type="file" multiple />
+              </label>
+            </div>
+            <div id="fileList" class="mt-3 text-sm text-gray-600"></div>
+          </div>
+        </div>
+
+        <!-- Step 4: Order Summary -->
+        <div id="step4" class="hidden p-6 border-b border-gray-200">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            4. Order Summary
+          </h2>
+
+          <div class="bg-gray-50 p-4 rounded-md mb-6">
+            <h3 class="font-medium text-gray-800 mb-3">
+              Selected Product/Service
+            </h3>
+            <div class="flex justify-between mb-2">
+              <span id="summaryProductName" class="text-gray-700"
+                >Cloud Infrastructure Management</span
+              >
+              <span id="summaryProductPrice" class="font-medium text-gray-900"
+                >$1,299.00</span
+              >
+            </div>
+            <div
+              id="summaryProductDescription"
+              class="text-sm text-gray-600 mb-3"
+            >
+              Comprehensive cloud infrastructure setup, optimization, and
+              management services.
+            </div>
+
+            <div
+              id="additionalServicesSection"
+              class="border-t border-gray-200 pt-3 mt-3"
+            >
+              <h4 class="font-medium text-gray-800 mb-2">
+                Additional Services
+              </h4>
+              <div id="additionalServicesList" class="space-y-1">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-700">Staff Training</span>
+                  <span class="font-medium text-gray-900">$499.00</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-700">Data Migration</span>
+                  <span class="font-medium text-gray-900">$799.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-4 rounded-md mb-6">
+            <h3 class="font-medium text-gray-800 mb-3">Customer Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+              <div>
+                <span class="text-gray-500">Name:</span>
+                <span id="summaryName" class="text-gray-700 ml-1"
+                  >Jonathan Mitchell</span
+                >
+              </div>
+              <div>
+                <span class="text-gray-500">Company:</span>
+                <span id="summaryCompany" class="text-gray-700 ml-1"
+                  >Innovate Solutions Inc.</span
+                >
+              </div>
+              <div>
+                <span class="text-gray-500">Email:</span>
+                <span id="summaryEmail" class="text-gray-700 ml-1"
+                  >jonathan.mitchell@innovatesolutions.com</span
+                >
+              </div>
+              <div>
+                <span class="text-gray-500">Phone:</span>
+                <span id="summaryPhone" class="text-gray-700 ml-1"
+                  >+1 (415) 555-7890</span
+                >
+              </div>
+              <div class="md:col-span-2">
+                <span class="text-gray-500">Address:</span>
+                <span id="summaryAddress" class="text-gray-700 ml-1"
+                  >101 Technology Drive, Suite 400, San Francisco, CA
+                  94107</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-4 rounded-md mb-6">
+            <h3 class="font-medium text-gray-800 mb-3">Pricing Summary</h3>
+            <div class="space-y-2 mb-3">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Subtotal</span>
+                <span id="summarySubtotal" class="text-gray-900"
+                  >$2,597.00</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Tax (9%)</span>
+                <span id="summaryTax" class="text-gray-900">$233.73</span>
+              </div>
+            </div>
+            <div class="flex justify-between pt-3 border-t border-gray-200">
+              <span class="font-medium text-gray-800">Total</span>
+              <span id="summaryTotal" class="font-bold text-gray-900"
+                >$2,830.73</span
+              >
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label class="custom-checkbox pl-7 text-gray-700 block mb-2">
+              <input type="checkbox" id="termsCheckbox" required />
+              <span class="checkmark"></span>
+              I agree to the
+              <a href="#" class="text-primary hover:underline"
+                >Terms and Conditions</a
+              >
+              and
+              <a href="#" class="text-primary hover:underline"
+                >Privacy Policy</a
+              >
+            </label>
+            <label class="custom-checkbox pl-7 text-gray-700 block">
+              <input type="checkbox" id="newsletterCheckbox" />
+              <span class="checkmark"></span>
+              Subscribe to our newsletter for updates on new products and
+              services
+            </label>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="p-6 bg-gray-50 flex justify-between">
+          <button
+            type="button"
+            id="prevBtn"
+            class="px-6 py-2 border border-gray-300 rounded-button text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 whitespace-nowrap hidden"
+          >
+            <span class="flex items-center">
+              <div class="w-4 h-4 flex items-center justify-center mr-2">
+                <i class="ri-arrow-left-line"></i>
+              </div>
+              Previous
+            </span>
+          </button>
+          <div class="ml-auto">
+            <button
+              type="button"
+              id="nextBtn"
+              class="px-6 py-2 bg-primary text-white rounded-button hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 whitespace-nowrap"
+            >
+              <span class="flex items-center">
+                Next
+                <div class="w-4 h-4 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </span>
+            </button>
+            <button
+              type="submit"
+              id="submitBtn"
+              class="px-6 py-2 bg-primary text-white rounded-button hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 whitespace-nowrap hidden"
+            >
+              <span class="flex items-center">
+                Submit Order
+                <div class="w-4 h-4 flex items-center justify-center ml-2">
+                  <i class="ri-check-line"></i>
+                </div>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="mt-8 text-center text-gray-600">
+        <p>Need assistance? Contact our sales team</p>
+        <div class="flex justify-center mt-2 space-x-4">
+          <a
+            href="tel:+18005551234"
+            class="flex items-center text-primary hover:underline"
+          >
+            <div class="w-5 h-5 flex items-center justify-center mr-1">
+              <i class="ri-phone-line"></i>
+            </div>
+            +1 (800) 555-1234
+          </a>
+          <a
+            href="mailto:sales@itcompany.com"
+            class="flex items-center text-primary hover:underline"
+          >
+            <div class="w-5 h-5 flex items-center justify-center mr-1">
+              <i class="ri-mail-line"></i>
+            </div>
+            sales@itcompany.com
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            
+            <!-- Logo & Description -->
+            <div>
+              <a href="index.html" target="_self" class="text-xl sm:text-2xl font-['Pacifico'] mb-4 sm:mb-6 block">
+                Scitronic
+              </a>
+              <p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">
+                Your trusted partner for comprehensive IT solutions and services.
+              </p>
+              <div class="flex space-x-3 sm:space-x-4">
+                <a href="https://www.facebook.com/www.scitronic.co.in" target="_blank" class="hover:text-gray-200">
+                  <i class="ri-facebook-fill text-lg sm:text-xl"></i>
+                </a>
+                <a href="https://wa.me/+919944825594" class="hover:text-gray-200">
+                  <i class="ri-whatsapp-fill text-lg sm:text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/scitronic/" target="_blank" class="hover:text-gray-200">
+                  <i class="ri-linkedin-fill text-lg sm:text-xl"></i>
+                </a>
+              </div>
+            </div>
+      
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h3>
+              <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+                <li><a href="./Aboutus/index.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Services</a></li>
+                <li><a href="./Products/index.html" class="text-gray-300 hover:text-white">Products</a></li>
+                <li><a href="./Contactus/index.html" class="text-gray-300 hover:text-white">Contact</a></li>
+              </ul>
+            </div>
+      
+            <!-- Services -->
+            <div>
+              <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Services</h3>
+              <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+                <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Computer Sales</a></li>
+                <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Repair Services</a></li>
+                <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Data Recovery</a></li>
+                <li><a href="./Services/index.html" class="text-gray-300 hover:text-white">Server Maintenance</a></li>
+              </ul>
+            </div>
+      
+            <!-- Business Hours -->
+            <div>
+              <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Business Hours</h3>
+              <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-300">
+                <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+                <li>Saturday: 10:00 AM - 4:00 PM</li>
+                <li>Sunday: Closed</li>
+                <li class="text-white font-medium mt-3 sm:mt-4">24/7 Emergency Support Available</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Bottom -->
+        <div class="border-t border-white/10">
+          <div class="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+            <div class="flex flex-col md:flex-row justify-center items-center">
+              <p class="text-xs sm:text-sm text-gray-300 text-center">
+                © 2025 Scitronic Solutions. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+   <script src="app.js"></script>
+  </body>
+</html>

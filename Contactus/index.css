@@ -1,0 +1,297 @@
+*{
+  box-sizing: border-box;
+  transition:0.3s linear;
+}
+:where([class^="ri-"])::before { content: "\f3c2"; }
+    .nav-dropdown { display: none; }
+    .nav-item:hover .nav-dropdown { display: block; }
+    .service-card:hover { transform: translateY(-5px); }
+    .product-card:hover { transform: scale(1.02); }
+.navMain_container{
+  width:850px;
+}
+.container_nav_items{
+  display: flex;
+  gap:40px;
+  justify-content: center;
+  align-items:center;
+}
+.nav-item{
+  transition:0.3s linear;
+  color: black;
+}
+.nav-item:hover{
+  color: #04023d;
+  font-weight:600;
+  scale:1.1;
+}
+::-webkit-scrollbar {
+  width: 10px!important;
+}
+
+::-webkit-scrollbar-track {
+  background:#111827
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+}
+.sticky-element {
+  position: sticky;
+  top: 0; /* distance from top before sticking */
+  z-index: 1000; /* ensure it’s above other content */
+  background-color: white; /* avoid content overlap transparency */
+}
+.container_quotemodal{
+margin-left:0px;
+}
+  
+@keyframes appear {
+  from{
+      opacity:0.7;
+      scale: 0.7;
+  }
+  to{
+      opacity:1;
+      scale:1;
+  }
+}
+.animationScrollEffect{
+  animation:appear linear;
+  animation-timeline:view();
+  animation-range: entry 0% cover 30% ;
+}
+.container_reqQuote_overall{
+  height:100vh!important;
+  width:100vw;
+  padding:5px;
+  padding-top:130px;
+  border-radius:0px;
+  overflow:scroll;
+  margin-left:0px!important;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.button_home_Explore {
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.811);
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px -20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: black;
+  width:250px;
+  transition: all 0.5s ease;
+  margin-left:10px;
+}
+
+.button_home_Explore:hover {
+  letter-spacing: 3px;
+  background-color: #111827;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid rgba(243, 243, 243, 0.407);
+  box-shadow: #04023d 0px 7px 29px 0px;
+}
+
+.button_home_Explore:active {
+  letter-spacing: 3px;
+  background-color: #111827;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #04023d 0px 0px 0px 0px;
+  transition: 100ms;
+}
+.container_quotemodal {
+  margin-left: 0px;
+}
+/* part 2*/
+.card_visitus_part2 {
+  cursor: pointer;
+}
+.card_visitus_part2:hover {
+  transform: translateY(-10px);
+}
+.background_icon {
+  background-color: #04023d;
+}
+.contact_mobileContainer{
+  cursor: url("../assets/Cursors/call.png") 1 1, auto;
+}
+.contact_locationContainer{
+  cursor: url("../assets/Cursors/location.png") 1 1, auto;
+}
+.contact_mailsentContainer{
+  cursor: url('../assets/Cursors/mail.png') 1 1, auto;
+}
+.card_contact_shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+/* get back form */
+.textBoxGetback {
+  all: unset;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  border-radius: 3px;
+  padding: 6px 10px;
+  width: 100%;
+}
+/* social media */
+.backgrond_socialmedia {
+  background-image: url("../assets/contactus/socialmedia_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #04023d;
+}
+
+@media only screen and (max-width:660px){
+  *{
+    box-sizing: border-box;
+    transition:0.3s linear;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  :where([class^="ri-"])::before { content: "\f3c2"; }
+      .nav-dropdown { display: none; }
+      .nav-item:hover .nav-dropdown { display: block; }
+      .service-card:hover { transform: translateY(-5px); }
+      .product-card:hover { transform: scale(1.02); }
+  .navMain_container{
+    width:0px;
+  }
+  .container_nav_items{
+    display: flex;
+    gap:40px;
+    justify-content: center;
+    align-items:center;
+  }
+  .nav-item{
+    transition:0.3s linear;
+    color: black;
+  }
+  .nav-item:hover{
+    color: #04023d;
+    font-weight:600;
+    scale:1.1;
+  }
+  ::-webkit-scrollbar {
+    width: 10px!important;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background:#111827
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+  }
+  .container_quotemodal{
+  margin-left:0px;
+  }
+  
+  .container_reqQuote_overall{
+    height:100vh!important;
+    width:90vw;
+    padding:5px;
+    padding-top:130px;
+    border-radius:0px;
+    overflow:scroll;
+    margin-left:0px!important;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  .product-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .button_home_Explore {
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.811);
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px -15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: black;
+    width:90%;
+    transition: all 0.5s ease;
+  }
+  
+  .button_home_Explore:hover {
+    letter-spacing: 3px;
+    background-color: #111827;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid rgba(243, 243, 243, 0.407);
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px -20px;
+  }
+  
+  .button_home_Explore:active {
+    letter-spacing: 3px;
+    background-color: #111827;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px -20px;
+    transition: 100ms;
+  }
+  .container_quotemodal {
+    margin-left: 0px;
+  }
+  /* part 2*/
+  .card_visitus_part2 {
+    cursor: pointer;
+  }
+  .card_visitus_part2:hover {
+    transform: translateY(-10px);
+  }
+  .background_icon {
+    background-color: #04023d;
+  }
+  .contact_mobileContainer{
+    cursor: url("../assets/Cursors/call.png") 1 1, auto;
+  }
+  .contact_locationContainer{
+    cursor: url("../assets/Cursors/location.png") 1 1, auto;
+  }
+  .contact_mailsentContainer{
+    cursor: url('../assets/Cursors/mail.png') 1 1, auto;
+  }
+  .card_contact_shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  /* get back form */
+  .textBoxGetback {
+    all: unset;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 3px;
+    padding: 6px 10px;
+    width: 80%;
+    font-size:12px;
+  }
+  /* social media */
+  .backgrond_socialmedia {
+    background-image: url("../assets/contactus/socialmedia_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #04023d;
+  }
+  .smDevProd_dropdown{
+    position:absolute;
+    top:0px;
+    right:0px;
+    font-size:8px;
+    padding-inline-start:0px 1px;
+  }
+  .small_quote_button{
+    font-size:12px;
+  }
+}

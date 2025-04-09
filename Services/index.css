@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  transition: 0.3s linear;
+}
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+.nav-dropdown {
+  display: none;
+}
+.nav-item:hover .nav-dropdown {
+  display: block;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.product-card:hover {
+  transform: scale(1.02);
+}
+.navMain_container {
+  width: 850px;
+}
+.container_nav_items {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item {
+  transition: 0.3s linear;
+  color: black;
+}
+.nav-item:hover {
+  color: #04023d;
+  font-weight: 600;
+  scale: 1.1;
+}
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+}
+.container_quotemodal {
+  margin-left: 0px;
+}
+.sticky-element {
+  position: sticky;
+  top: 0; /* distance from top before sticking */
+  z-index: 1000; /* ensure it’s above other content */
+  background-color: white; /* avoid content overlap transparency */
+}
+@keyframes appear {
+  from {
+    opacity: 0.7;
+    scale: 0.7;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.animationScrollEffect {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.card_contact_shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.container_reqQuote_overall {
+  height: 100vh !important;
+  width: 100vw;
+  padding: 5px;
+  padding-top: 130px;
+  border-radius: 0px;
+  overflow: scroll;
+  margin-left: 0px !important;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.button_home_Explore {
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.811);
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px -20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: black;
+  width: 250px;
+  transition: all 0.5s ease;
+  margin-left: 10px;
+}
+
+.button_home_Explore:hover {
+  letter-spacing: 3px;
+  background-color: #111827;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid rgba(243, 243, 243, 0.407);
+  box-shadow: #04023d 0px 7px 29px 0px;
+}
+
+.button_home_Explore:active {
+  letter-spacing: 3px;
+  background-color: #111827;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #04023d 0px 0px 0px 0px;
+  transition: 100ms;
+}
+/*part 2*/
+.service-card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+/* plan part*/
+.container_plans {
+  background-image: linear-gradient(to right, #001b3e, #511639);
+}
+.button_home_Explore_buy:hover {
+  background-color: #32c75f;
+  font-weight: 800;
+  box-shadow: 0px 0px 30px #32c75f;
+}
+.pricing-card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.card_plan_popular {
+  background-color: #000000;
+  cursor: pointer;
+}
+.card_plan_popular:hover {
+  transform: translateY(-15px);
+  box-shadow: #32c75f 0px 5px 27px -5px, #32c75f 0px 0px 16px -8px;
+}
+
+/*get back form*/
+.form_getback {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px,
+    rgba(0, 0, 0, 0.478) 0px 0px 16px -8px;
+}
+.textBoxGetback {
+  all: unset;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px!important;
+  padding: 6px 10px;
+  width: 90%!important;
+}
+.Service_dropdown {
+  border: 1px solid rgba(0, 0, 0, 0.136);
+  padding: 10px 14px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+}
+textarea{
+  border-radius: 3px!important;
+}
+.buttonSubmit_getback {
+  cursor: url("../assets/services/icons8-target.png"), auto;
+}
+.gmapLogo {
+  height: 200px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  z-index: -2;
+  filter: opacity(0.3);
+  background: transparent;
+}
+@media only screen and (max-width: 660px) {
+  * {
+    box-sizing: border-box;
+    transition: 0.3s linear;
+  }
+  body {
+    overflow-x: hidden !important;
+  }
+  :where([class^="ri-"])::before {
+    content: "\f3c2";
+  }
+  .nav-dropdown {
+    display: none;
+  }
+  .nav-item:hover .nav-dropdown {
+    display: block;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  .product-card:hover {
+    transform: scale(1.02);
+  }
+  .navMain_container {
+    width: 850px;
+  }
+  .container_nav_items {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-item {
+    transition: 0.3s linear;
+    color: black;
+  }
+  .nav-item:hover {
+    color: #04023d;
+    font-weight: 600;
+    scale: 1.1;
+  }
+  ::-webkit-scrollbar {
+    width: 10px !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111827;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+  }
+  .container_quotemodal {
+    margin-left: 0px;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0.7;
+      scale: 0.7;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  .animationScrollEffect {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  .container_reqQuote_overall {
+    height: 100vh !important;
+    width: 100vw;
+    padding: 5px;
+    padding-top: 130px;
+    border-radius: 0px;
+    overflow: scroll;
+    margin-left: 0px !important;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  .product-card:hover {
+    transform: scale(1.02);
+  }
+  .gmapLogo {
+    height: 130px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    z-index: -2;
+    filter: opacity(0.3);
+    background: transparent;
+  }
+
+  .button_home_Explore {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.811);
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px -20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: black;
+    width: 260px;
+    transition: all 0.5s ease;
+  }
+
+  .button_home_Explore:hover {
+    letter-spacing: 3px;
+    background-color: #111827;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid rgba(243, 243, 243, 0.407);
+    box-shadow: #04023d 0px 7px 29px 0px;
+  }
+
+  .button_home_Explore:active {
+    letter-spacing: 3px;
+    background-color: #111827;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #04023d 0px 0px 0px 0px;
+    transition: 100ms;
+  }
+  /*part 2*/
+  .service-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  /* plan part*/
+  .container_plans {
+    background-image: linear-gradient(to right, #001b3e, #511639);
+  }
+  .button_home_Explore_buy:hover {
+    background-color: #32c75f;
+    font-weight: 800;
+    box-shadow: 0px 0px 30px #32c75f;
+  }
+  .pricing-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  .card_plan_popular {
+    background-color: #000000;
+    cursor: pointer;
+  }
+  .card_plan_popular:hover {
+    transform: translateY(-15px);
+  }
+
+  /*get back form*/
+  .form_getback {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 27px -5px,
+      rgba(0, 0, 0, 0.478) 0px 0px 16px -8px;
+  }
+  .textBoxGetback {
+    all: unset;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding: 6px 10px;
+    width: 90%!important;
+    font-size: 12px;
+  }
+  .buttonSubmit_getback {
+    cursor: url("../assets/services/icons8-target.png"), auto;
+  }
+  .Service_dropdown {
+    border: 1px solid rgba(0, 0, 0, 0.136);
+    padding: 6px 10px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 12px;
+  }
+  .dropDownIntrenst {
+    font-size: 10px;
+    width: 50%;
+  }
+  textarea {
+    font-size: 12px;
+  } 
+  .small_quote_button{
+    font-size:12px;
+  }
+ 
+  .sm_dev_smallItems {
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+}

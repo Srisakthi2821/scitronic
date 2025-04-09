@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scitronic Solutions - Professional IT Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#131313",
+              secondary: "#2A2A2A",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+        <!--Email js-->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "Rg21DRAmqQJY0VK8z",
+          });
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="bg-white shadow-md py-3 sticky-element">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../index.html" class="text-2xl font-['Pacifico']">Scitronic</a>
+
+        <!-- Menu Links (Desktop) -->
+        <div class="hidden md:flex space-x-8">
+          <div class="container_nav_items">
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../index.html" target="_self">Home</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Services/index.html" target="_self">Services</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Products/index.html" target="_self">Products</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Aboutus/index.html" target="_self">About Us</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="index.html" target="_self">Contact Us</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="hidden md:flex items-center">
+          <!-- Phone Number -->
+          <div class="flex items-center space-x-2">
+            <i class="ri-phone-line"></i>
+            <a href="tel:+9198734 32597">
+              <span class="text-gray-800 font-medium">+91 98734 32597</span></a
+            >
+          </div>
+
+          <!-- Request Quote Button -->
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Hidden by Default) -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex flex-col px-4 pb-4 bg-white shadow-md"
+      >
+        <a href="../Services/index.html" class="text-gray-700 sm_dev_smallItems"
+          >Services</a
+        >
+        <a href="../Products/index.html" class="text-gray-700 sm_dev_smallItems"
+          >Products</a
+        >
+        <a href="../Aboutus/index.html" class="text-gray-700 sm_dev_smallItems"
+          >About Us</a
+        >
+        <a href="index.html" class="text-gray-700 sm_dev_smallItems"
+          >Contact Us</a
+        >
+      </div>
+    </nav>
+
+    <div
+      class="relative bg-cover bg-center py-20 sm:py-24 md:py-28 lg:py-32"
+      style="background-image: url('../assets/contactus/mainbackground.jpg')"
+    >
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl sm:text-5xl font-bold text-white mb-3 sm:mb-4">
+          We’d love to Connect&nbsp;<i
+            class="mt-1 ri-heart-fill absolute text-3xl sm:text-5xl bg-gradient-to-r from-blue-500 via-blue-500 to-white-1000 bg-clip-text text-transparent"
+          ></i>
+        </h1>
+        <p class="text-sm sm:text-lg text-white/90 max-w-xl">
+          We're here to help and answer any questions you might have. We look
+          forward to hearing from you.
+        </p>
+      </div>
+    </div>
+
+    <section class="py-12 sm:py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-14 md:mb-16"
+        >
+          <!-- Visit Us -->
+          <a
+            href="https://www.google.com/maps/search/?q=Your+Location+Name"
+            class="bg-white p-6 sm:p-8 rounded card_visitus_part2 card_contact_shadow text-center contact_locationContainer animationScrollEffect"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center background_icon rounded-full mx-auto mb-4 sm:mb-6"
+            >
+              <i
+                class="ri-map-pin-line text-white text-sm sm:text-base md:text-lg"
+              ></i>
+            </div>
+            <h3 class="text-sm sm:text-base md:text-lg font-bold mb-2 sm:mb-4">
+              Visit Us
+            </h3>
+            <p
+              class="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed"
+            >
+              #424, 7th Street Extension,<br />
+              100 Feet Road, Gandhipuram,<br />
+              Coimbatore - 641-012,<br />
+              Tamilnadu
+            </p>
+          </a>
+
+          <!-- Call Us -->
+          <a
+            href="tel:+919876543210"
+            class="bg-white p-6 sm:p-8 rounded card_visitus_part2 card_contact_shadow text-center contact_mobileContainer animationScrollEffect"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center background_icon rounded-full mx-auto mb-4 sm:mb-6"
+            >
+              <i
+                class="ri-phone-line text-white text-sm sm:text-base md:text-lg"
+              ></i>
+            </div>
+            <h3 class="text-sm sm:text-base md:text-lg font-bold mb-2 sm:mb-4">
+              Call Us
+            </h3>
+            <p class="text-xs sm:text-sm md:text-base text-gray-600">
+              Phone: +91 99448 25594<br />
+              Whatsapp : +91 99448 25594
+            </p>
+            <p class="text-xs sm:text-sm md:text-base text-gray-600 mt-2">
+              Mon-Fri: 9:00 AM - 6:00 PM
+            </p>
+          </a>
+
+          <!-- Email Us -->
+          <a
+            href="mailto:example@email.com"
+            class="bg-white p-6 sm:p-8 rounded card_visitus_part2 card_contact_shadow text-center contact_mailsentContainer animationScrollEffect"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center background_icon rounded-full mx-auto mb-4 sm:mb-6"
+            >
+              <i
+                class="ri-mail-line text-white text-sm sm:text-base md:text-lg"
+              ></i>
+            </div>
+            <h3 class="text-sm sm:text-base md:text-lg font-bold mb-2 sm:mb-4">
+              Email Us
+            </h3>
+            <p class="text-xs sm:text-sm md:text-base text-gray-600">
+              General Inquiries:<br />info@scitronic.co.in
+            </p>
+          </a>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8"
+          id="booknow"
+        >
+          <!-- Contact Form -->
+          <div
+            class="bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <h3 class="text-xl sm:text-lg md:text-xl font-bold mb-4 sm:mb-6">
+              Send Us a Message
+            </h3>
+            <form id="contactusForm" class="space-y-4 sm:space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                  <label class="block text-xs sm:text-sm md:text-base text-gray-700 mb-1 sm:mb-2">First Name *</label>
+                  <input type="text" name="firstName" class="w-full textBoxGetback" required />
+                </div>
+                <div>
+                  <label class="block text-xs sm:text-sm md:text-base text-gray-700 mb-1 sm:mb-2">Last Name *</label>
+                  <input type="text" name="lastName" class="w-full textBoxGetback" required />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs sm:text-sm md:text-base text-gray-700 mb-1 sm:mb-2">Email *</label>
+                <input type="email" name="email" class="w-full textBoxGetback" required />
+              </div>
+              <div>
+                <label class="block text-xs sm:text-sm md:text-base text-gray-700 mb-1 sm:mb-2">Phone *</label>
+                <input type="tel" name="phone" class="w-full textBoxGetback" required />
+              </div>
+              <div>
+                <label class="block text-xs sm:text-sm md:text-base text-gray-700 mb-1 sm:mb-2">Type of service</label>
+                <div class="relative">
+                  <select name="department" class="w-full textBoxGetback" required>
+                    <option value="none">Select Service</option>
+                    <option value="sales">Product Related</option>
+                    <option value="support">Technical Support</option>
+                    <option value="billing">Installation Related</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other (Specify In Message)</option>
+                  </select>
+                  <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs sm:text-sm md:text-base text-gray-700 mb-1 sm:mb-2">Message (optional)</label>
+                <textarea name="message" rows="4" class="w-full textBoxGetback" ></textarea>
+              </div>
+              <button type="submit" class="button_home_Explore">Send Message</button>
+            </form>
+            
+          </div>
+
+          <!-- Map & Info -->
+          <div
+            class="bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <h3 class="text-xl sm:text-lg md:text-xl font-bold mb-4 sm:mb-6">
+              Our Location
+            </h3>
+            <div
+              class="relative h-[300px] sm:h-[350px] md:h-[400px] rounded overflow-hidden mb-4 sm:mb-6"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2449643187715!2d76.96343107480858!3d11.020238589143714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858566d055eb9%3A0xfa4a754accf442a4!2sScitronic!5e0!3m2!1sen!2sin!4v1743343878285!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="space-y-3 sm:space-y-4">
+              <div
+                class="flex items-center text-xs sm:text-sm md:text-base text-gray-600"
+              >
+                <i class="ri-time-line mr-2 text-primary"></i>
+                <span
+                  >Business Hours: Monday - Friday, 9:00 AM - 6:00 PM PST</span
+                >
+              </div>
+              <div
+                class="flex items-center text-xs sm:text-sm md:text-base text-gray-600"
+              >
+                <i class="ri-parking-line mr-2 text-primary"></i>
+                <span>Free Parking Available</span>
+              </div>
+              <div
+                class="flex items-center text-xs sm:text-sm md:text-base text-gray-600"
+              >
+                <i class="ri-bus-line mr-2 text-primary"></i>
+                <span
+                  >Public Transportation: (950m) 10 minutes walk from
+                  Gandhipuram Bustand</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-xl sm:text-3xl font-bold mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
+            Find quick answers to common questions
+          </p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4" id="faqContainer">
+          <!-- FAQ items will be dynamically added here -->
+        </div>
+      </div>
+    </section>
+
+    <section class="py-7 sm:py-14 md:py-20 backgrond_socialmedia">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div class="text-center mb-5 sm:mb-14 md:mb-16">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4"
+          >
+            Connect With Us
+          </h2>
+          <p
+            class="text-white text-sm sm:text-base md:text-lg max-w-2xl mx-auto"
+          >
+            Follow us on social media for the latest updates
+          </p>
+        </div>
+        <div class="flex justify-center space-x-4 sm:space-x-5 md:space-x-6">
+          <div class="animationScrollEffect">
+            <a
+              href="https://www.linkedin.com/company/scitronic/"
+              class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+            >
+              <i class="ri-linkedin-fill text-base sm:text-lg md:text-xl"></i>
+            </a>
+          </div>
+          <div class="animationScrollEffect">
+            <a
+              href="https://wa.me/+919944825594"
+              class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+            >
+              <i class="ri-whatsapp-fill text-base sm:text-lg md:text-xl"></i>
+            </a>
+          </div>
+          <div class="animationScrollEffect">
+            <a
+              href="https://www.facebook.com/www.scitronic.co.in"
+              target="_blank"
+              class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+            >
+              <i class="ri-facebook-fill text-base sm:text-lg md:text-xl"></i>
+            </a>
+          </div>
+          <div class="animationScrollEffect">
+            <a
+              href="tel:+919876543210"
+              class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+            >
+              <i class="ri-phone-fill text-base sm:text-lg md:text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+        >
+          <!-- Logo & Description -->
+          <div>
+            <a
+              href="../index.html"
+              target="_self"
+              class="text-xl sm:text-2xl font-['Pacifico'] mb-4 sm:mb-6 block"
+            >
+              Scitronic
+            </a>
+            <p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">
+              Your trusted partner for comprehensive IT solutions and services.
+            </p>
+            <div class="flex space-x-3 sm:space-x-4">
+              <a
+                href="https://www.facebook.com/www.scitronic.co.in"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-facebook-fill text-lg sm:text-xl"></i>
+              </a>
+              <a href="https://wa.me/+919944825594" class="hover:text-gray-200">
+                <i class="ri-whatsapp-fill text-lg sm:text-xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/scitronic/"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-linkedin-fill text-lg sm:text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="../Aboutus/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Products/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="index.html" class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Services
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Computer Sales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Repair Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Data Recovery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Server Maintenance</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Business Hours -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Business Hours
+            </h3>
+            <ul
+              class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-300"
+            >
+              <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+              <li>Saturday: 10:00 AM - 4:00 PM</li>
+              <li>Sunday: Closed</li>
+              <li class="text-white font-medium mt-3 sm:mt-4">
+                24/7 Emergency Support Available
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="border-t border-white/10">
+        <div class="container mx-auto px-1 sm:px-2 py-2 sm:py-3">
+          <p class="text-xs sm:text-sm text-gray-300 text-center">
+            © 2025 Scitronic Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

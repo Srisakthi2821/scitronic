@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scitronic Solutions - Professional IT Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#131313",
+              secondary: "#2A2A2A",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-white text-gray-900">
+    <nav class="bg-white shadow-md py-3 sticky-element">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../index.html" class="text-2xl font-['Pacifico']">Scitronic</a>
+
+        <!-- Menu Links (Desktop) -->
+        <div class="hidden md:flex space-x-8">
+          <div class="container_nav_items">
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../index.html" target="_self">Home</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Services/index.html" target="_self">Services</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Products/index.html" target="_self">Products</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="index.html" target="_self">About Us</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Contactus/index.html" target="_self">Contact Us</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="hidden md:flex items-center">
+          <!-- Phone Number -->
+          <div class="flex items-center space-x-2">
+            <i class="ri-phone-line"></i>
+            <a href="tel:+9198734 32597"> <span class="text-gray-800 font-medium">+91 98734 32597</span></a>
+          </div>
+         
+
+          <!-- Request Quote Button -->
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Hidden by Default) -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex flex-col px-4 pb-4 bg-white shadow-md"
+      >
+        <a href="../Services/index.html" class="text-gray-700 sm_dev_smallItems"
+          >Services</a
+        >
+        <a href="../Products/index.html" class="text-gray-700 sm_dev_smallItems"
+          >Products</a
+        >
+        <a href="index.html" class="text-gray-700 sm_dev_smallItems"
+          >About Us</a
+        >
+        <a
+          href="../Contactus/index.html"
+          class="text-gray-700 sm_dev_smallItems"
+          >Contact Us</a
+        >
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="relative bg-cover bg-center py-16 sm:py-24 md:py-32"
+      style="
+        background-image: url('../assets/aboutus/background_aboutus.jpg');
+        background-position: top;
+      "
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4 md:mb-6"
+        >
+          About Scitronic
+        </h1>
+        <p
+          class="text-sm sm:text-base md:text-lg lg:text-xl text-white opacity-90 max-w-2xl"
+        >
+          Service Provider of computer accessories, security system &
+          installation & sd cards since 2014 in Coimbatore, Tamil Nadu
+        </p>
+        <p
+          class="text-xs sm:text-sm md:text-base lg:text-lg text-white opacity-50 mt-3 sm:mt-4 max-w-2xl"
+        >
+          Leading the way in comprehensive IT solutions, hardware sales, and
+          technical support. We're your trusted partner in navigating the
+          digital landscape.
+        </p>
+      </div>
+    </div>
+    <section class="py-10 sm:py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <div
+            class="bg-white p-6 sm:p-8 rounded-lg shadow-sm card_ourmission animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-flag-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-semibold mb-3">Our Mission</h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              To provide cutting-edge technology solutions that empower
+              businesses and individuals to achieve their full potential in the
+              digital age, while ensuring reliability, security, and innovation
+              in every service we deliver.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 sm:p-8 rounded-lg shadow-sm card_ourmission animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-eye-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-semibold mb-3">Our Vision</h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              To become the leading technology solutions provider, recognized
+              globally for our excellence in service, innovation in solutions,
+              and commitment to sustainable technology practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-1 sm:py-10 md:py-16">
+      <div
+        class="relative bg-cover bg-center mx-auto px-2 sm:px-6 lg:px-8 py-24 sm:py-28 md:py-32"
+        style="
+          background-image: url('../assets/aboutus/bg_part_3.jpg');
+          background-position: top;
+        "
+      >
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-8 sm:mb-10 md:mb-12"
+        >
+          Our Core Services
+        </h1>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-8">
+          <div
+            class="service-card bg-white p-2 sm:p-6 md:p-8 rounded-md shadow-sm animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-computer-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-sm sm:text-xl md:text-2xl font-semibold mb-2">
+              IT Services & Solutions
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Comprehensive IT support, network solutions, and digital
+              transformation services.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-2 sm:p-6 md:p-8 rounded-md shadow-sm animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-desktop-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-sm sm:text-xl md:text-2xl font-semibold mb-2">
+              Desktop Solutions
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              New and refurbished desktop systems for business and personal use.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-2 sm:p-6 md:p-8 rounded-md shadow-sm animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-laptop-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-sm sm:text-xl md:text-2xl font-semibold mb-2">
+              Laptop Solutions
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Wide range of laptops and mobile computing solutions.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-2 sm:p-6 md:p-8 rounded-md shadow-sm animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-camera-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-sm sm:text-xl md:text-2xl font-semibold mb-2">
+              Camera Equipment
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Professional-grade cameras and photography solutions.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-2 sm:p-6 md:p-8 rounded-md shadow-sm animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-server-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-sm sm:text-xl md:text-2xl font-semibold mb-2">
+              Server Management
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Enterprise-level server solutions and maintenance services.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-2 sm:p-6 md:p-8 rounded-md shadow-sm animationScrollEffect"
+          >
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-building-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-sm sm:text-xl md:text-2xl font-semibold mb-2">
+              Corporate Partnerships
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Strategic technology partnerships for business growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 sm:py-14 md:py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12"
+        >
+          Our Values
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div class="text-center animationScrollEffect">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i
+                class="ri-shield-check-line text-primary text-2xl sm:text-3xl"
+              ></i>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
+              Trust
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Building lasting relationships through reliability and
+              transparency.
+            </p>
+          </div>
+          <div class="text-center animationScrollEffect">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i
+                class="ri-lightbulb-line text-primary text-2xl sm:text-3xl"
+              ></i>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
+              Innovation
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Constantly evolving and adapting to new technologies.
+            </p>
+          </div>
+          <div class="text-center animationScrollEffect">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-team-line text-primary text-2xl sm:text-3xl"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
+              Collaboration
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Working together to achieve exceptional results.
+            </p>
+          </div>
+          <div class="text-center animationScrollEffect">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-3 sm:mb-4"
+            >
+              <i class="ri-award-line text-primary text-2xl sm:text-3xl"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
+              Excellence
+            </h3>
+            <p class="text-gray-600 text-xs sm:text-base md:text-lg">
+              Delivering superior quality in everything we do.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 sm:py-14 md:py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12"
+        >
+          Meet Our Experts
+        </h2>
+        <div class="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 animationScrollEffect"
+          >
+            <img
+              src="../assets/aboutus/CEO.png"
+              alt="Founder"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-lg sm:text-xl font-semibold">Gokul G</h3>
+              <p class="text-gray-600 text-sm sm:text-base">Founder & Owner</p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 animationScrollEffect"
+          >
+            <img
+              src="../assets/aboutus/CEO.png"
+              alt="Solution Architect"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-lg sm:text-xl font-semibold">Gokul G</h3>
+              <p class="text-gray-600 text-sm sm:text-base">
+                Solutions Architect
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 animationScrollEffect"
+          >
+            <img
+              src="../assets/aboutus/CEO.png"
+              alt="Technical Lead"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-lg sm:text-xl font-semibold">Gokul G</h3>
+              <p class="text-gray-600 text-sm sm:text-base">Technical Lead</p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 animationScrollEffect"
+          >
+            <img
+              src="../assets/aboutus/CEO.png"
+              alt="Service Manager"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-lg sm:text-xl font-semibold">Gokul G</h3>
+              <p class="text-gray-600 text-sm sm:text-base">Service Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 sm:py-14 md:py-16 bg-primary container_part2">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-white text-center mb-10 sm:mb-12"
+        >
+          Our Achievements<i class="ri-trophy-fill"></i>
+
+        </h2>
+        <div
+          class="grid gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-4 text-center"
+        >
+          <div class="animationScrollEffect">
+            <div
+              class="text-3xl sm:text-4xl font-bold text-white stats-counter"
+              data-target="11"
+            >
+              0
+            </div>
+            <p class="text-white mt-2 text-base sm:text-lg">
+              Years in Business
+            </p>
+          </div>
+          <div class="animationScrollEffect">
+            <div
+              class="text-3xl sm:text-4xl font-bold text-white stats-counter"
+              data-target="40"
+            >
+              0
+            </div>
+            <p class="text-white mt-2 text-base sm:text-lg">
+              Turnover
+              <span class="text-xs sm:text-sm opacity-60">( In LPA )</span>
+            </p>
+          </div>
+          <div class="animationScrollEffect">
+            <div
+              class="text-3xl sm:text-4xl font-bold text-white stats-counter"
+              data-target="10000"
+            >
+              0
+            </div>
+            <p class="text-white mt-2 text-base sm:text-lg">
+              Projects Completed
+            </p>
+          </div>
+
+          <div class="animationScrollEffect">
+            <div
+              class="text-3xl sm:text-4xl font-bold text-white stats-counter"
+              data-target="10"
+            >
+              0
+            </div>
+            <p class="text-white mt-2 text-base sm:text-lg">Team Size</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white bg-opacity-5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Work Together?</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss how we can help transform your business with our
+          technology solutions.
+        </p>
+        <div class="animationScrollEffect">
+          <a href="../Contactus/index.html">
+            <button
+              class="button_home_Explore"
+              style="border: 1px solid rgba(0, 0, 0, 0.2)"
+            >
+              Contact Us
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+        >
+          <!-- Logo & Description -->
+          <div>
+            <a
+              href="../index.html"
+              target="_self"
+              class="text-xl sm:text-2xl font-['Pacifico'] mb-4 sm:mb-6 block"
+            >
+              Scitronic
+            </a>
+            <p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">
+              Your trusted partner for comprehensive IT solutions and services.
+            </p>
+            <div class="flex space-x-3 sm:space-x-4">
+              <a
+                href="https://www.facebook.com/www.scitronic.co.in"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-facebook-fill text-lg sm:text-xl"></i>
+              </a>
+              <a href="https://wa.me/+919944825594" class="hover:text-gray-200">
+                <i class="ri-whatsapp-fill text-lg sm:text-xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/scitronic/"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-linkedin-fill text-lg sm:text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a href="index.html" class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Products/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Contactus/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Services
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Computer Sales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Repair Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Data Recovery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Server Maintenance</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Business Hours -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Business Hours
+            </h3>
+            <ul
+              class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-300"
+            >
+              <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+              <li>Saturday: 10:00 AM - 4:00 PM</li>
+              <li>Sunday: Closed</li>
+              <li class="text-white font-medium mt-3 sm:mt-4">
+                24/7 Emergency Support Available
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="border-t border-white/10">
+        <div class="container mx-auto px-1 sm:px-2 py-2 sm:py-3">
+          <p class="text-xs sm:text-sm text-gray-300 text-center">
+            © 2025 Scitronic Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

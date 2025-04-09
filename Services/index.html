@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scitronic Solutions - Professional IT Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#131313",
+              secondary: "#2A2A2A",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="bg-white shadow-md py-3 sticky-element">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../index.html" class="text-2xl font-['Pacifico']">Scitronic</a>
+
+        <!-- Menu Links (Desktop) -->
+        <div class="hidden md:flex space-x-8">
+          <div class="container_nav_items">
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../index.html" target="_self">Home</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="index.html" target="_self">Services</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Products/index.html" target="_self">Products</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Aboutus/index.html" target="_self">About Us</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Contactus/index.html" target="_self">Contact Us</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="hidden md:flex items-center">
+          <!-- Phone Number -->
+          <div class="flex items-center space-x-2">
+            <i class="ri-phone-line"></i>
+            <a href="tel:+9198734 32597">
+              <span class="text-gray-800 font-medium">+91 98734 32597</span></a
+            >
+          </div>
+
+          <!-- Request Quote Button -->
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Hidden by Default) -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex flex-col px-4 pb-4 bg-white shadow-md"
+      >
+        <a href="index.html" class="text-gray-700 sm_dev_smallItems"
+          >Services</a
+        >
+        <a href="../Products/index.html" class="text-gray-700 sm_dev_smallItems"
+          >Products</a
+        >
+        <a href="../Aboutus/index.html" class="text-gray-700 sm_dev_smallItems"
+          >About Us</a
+        >
+        <a
+          href="../Contactus/index.html"
+          class="text-gray-700 sm_dev_smallItems"
+          >Contact Us</a
+        >
+      </div>
+    </nav>
+
+    <div
+      class="relative bg-cover bg-center py-20 sm:py-28 md:py-32"
+      style="background-image: url('../assets/services/services_main_bg.jpg')"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40"
+      ></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6"
+        >
+          Technology Solutions for Your Business
+        </h1>
+        <p
+          class="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-xl sm:max-w-2xl"
+        >
+          Discover our comprehensive range of IT services designed to transform
+          your business and drive growth in the digital age.
+        </p>
+      </div>
+    </div>
+
+    <section class="py-16 sm:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+          >
+            Our Service Categories
+          </h2>
+          <p
+            class="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto"
+          >
+            Explore our range of services designed to meet your networking and
+            IT infrastructure needs.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
+          <!-- Card 1: Networking Solutions -->
+          <div
+            class="service-card bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4 sm:mb-6"
+            >
+              <i class="ri-router-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">
+              Networking Solutions
+            </h3>
+            <p
+              class="text-gray-600 text-sm sm:text-base md:text-lg mb-4 sm:mb-6"
+            >
+              Comprehensive networking services including design,
+              implementation, and maintenance.
+            </p>
+            <ul
+              class="space-y-2 sm:space-y-3 mb-4 sm:mb-6 text-gray-600 text-sm sm:text-base"
+            >
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Network Design
+                and Architecture
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> LAN/WAN Setup
+                and Management
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Wireless
+                Networking Solutions
+              </li>
+            </ul>
+            <button style="align-self: center" class="button_home_Explore">
+              Learn More
+            </button>
+          </div>
+
+          <!-- Card 2: IT Product Sales -->
+          <div
+            class="service-card bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4 sm:mb-6"
+            >
+              <i
+                class="ri-shopping-cart-line text-primary text-xl sm:text-2xl"
+              ></i>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">
+              IT Product Sales
+            </h3>
+            <p
+              class="text-gray-600 text-sm sm:text-base md:text-lg mb-4 sm:mb-6"
+            >
+              Wide range of IT products from leading brands to meet your
+              business requirements.
+            </p>
+            <ul
+              class="space-y-2 sm:space-y-3 mb-4 sm:mb-6 text-gray-600 text-sm sm:text-base"
+            >
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Servers and
+                Storage Devices
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Networking
+                Hardware
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Security
+                Appliances
+              </li>
+            </ul>
+            <button style="align-self: center" class="button_home_Explore">
+              Learn More
+            </button>
+          </div>
+
+          <!-- Card 3: Installation and Management -->
+          <div
+            class="service-card bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4 sm:mb-6"
+            >
+              <i class="ri-tools-line text-primary text-xl sm:text-2xl"></i>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">
+              Installation and Management
+            </h3>
+            <p
+              class="text-gray-600 text-sm sm:text-base md:text-lg mb-4 sm:mb-6"
+            >
+              Professional installation and ongoing management services for
+              seamless operations.
+            </p>
+            <ul
+              class="space-y-2 sm:space-y-3 mb-4 sm:mb-6 text-gray-600 text-sm sm:text-base"
+            >
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Hardware
+                Installation Services
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> System
+                Configuration and Integration
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Ongoing
+                Maintenance and Support
+              </li>
+            </ul>
+            <button style="align-self: center" class="button_home_Explore">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container_plans py-16 sm:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl text-white font-bold mb-4"
+          >
+            Service Packages
+          </h2>
+          <p
+            class="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto"
+          >
+            Select the ideal service plan to streamline your IT operations and
+            infrastructure
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
+          <!-- Basic Package -->
+          <div
+            class="pricing-card bg-white flex flex-col justify-between p-6 sm:p-8 rounded shadow-lg animationScrollEffect"
+          >
+            <h3 class="text-lg sm:text-xl font-bold mb-2">Basic</h3>
+            <div class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              ₹499<span class="text-sm sm:text-lg text-gray-500">/mo</span>
+            </div>
+            <ul
+              class="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-gray-600 text-sm sm:text-base"
+            >
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Basic Hardware
+                Support
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Networking Setup
+                Assistance
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Email Support
+              </li>
+            </ul>
+            <button class="button_home_Explore button_home_Explore_buy">
+              Book a Plan
+            </button>
+          </div>
+
+          <!-- Professional Package -->
+          <div
+            class="card_plan_popular pricing-card flex flex-col justify-between text-white p-6 sm:p-8 rounded shadow-lg relative animationScrollEffect"
+          >
+            <div
+              class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-xs sm:text-sm font-medium"
+            >
+              Popular
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold mb-2">Professional</h3>
+            <div class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              ₹999<span class="text-sm sm:text-lg text-white opacity-70"
+                >/mo</span
+              >
+            </div>
+            <ul
+              class="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-white text-sm sm:text-base"
+            >
+              <li class="flex items-center">
+                <i class="ri-check-line mr-2"></i> Advanced Networking Solutions
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line mr-2"></i> Hardware Installation
+                Services
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line mr-2"></i> 24/7 Priority Support
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line mr-2"></i> Security Monitoring
+              </li>
+            </ul>
+            <button
+              class="button_home_Explore"
+              style="
+                background-color: #32c75f;
+                font-weight: 600;
+                box-shadow: 0px 0px 30px -7px #32c75f;
+              "
+            >
+              Grab Now <i class="fa-solid fa-credit-card"></i>
+            </button>
+          </div>
+
+          <!-- Enterprise Package -->
+          <div
+            class="pricing-card bg-white p-6 sm:p-8 flex flex-col justify-between rounded shadow-lg animationScrollEffect"
+          >
+            <h3 class="text-lg sm:text-xl font-bold mb-2">Enterprise</h3>
+            <div class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              Custom
+            </div>
+            <ul
+              class="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-gray-600 text-sm sm:text-base"
+            >
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Comprehensive IT
+                Infrastructure Management
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Unlimited Users
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Dedicated
+                Support Team
+              </li>
+              <li class="flex items-center">
+                <i class="ri-check-line text-primary mr-2"></i> Custom
+                Integration
+              </li>
+            </ul>
+            <button class="button_home_Explore button_home_Explore_buy">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            Client Success Stories
+          </h2>
+          <p
+            class="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto"
+          >
+            See how our services have helped businesses achieve their goals
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
+          <!-- Testimonial 1 -->
+          <div
+            class="testimonial-card bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <div class="flex items-center mb-4 sm:mb-6">
+              <img src="../assets/services/googlemap.png" class="gmapLogo" />
+              <img
+                src="../assets/services/user.jpg"
+                alt="Subash Manickam"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-base sm:text-lg">Subash Manickam</h4>
+                <p class="text-gray-600 text-sm">Local Guide</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
+              For the laptop services we can opt for this place. Gokul is very
+              informative and shares wide options for the material changes on
+              the laptop. Good service centre for the laptop and PC. He is doing
+              CCTV installation too.
+            </p>
+            <div class="flex text-yellow-400 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="testimonial-card bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <div class="flex items-center mb-4 sm:mb-6">
+              <img src="../assets/services/googlemap.png" class="gmapLogo" />
+              <img
+                src="../assets/services/user.jpg"
+                alt="Palaniappan Muruganantham"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-base sm:text-lg">
+                  Palaniappan Muruganantham
+                </h4>
+                <p class="text-gray-600 text-sm">Local Guide</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
+              Transparent business and good approach to customer. Congrats!
+            </p>
+            <div class="flex text-yellow-400 text-sm">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="testimonial-card bg-white p-6 sm:p-8 rounded card_contact_shadow animationScrollEffect"
+          >
+            <div class="flex items-center mb-4 sm:mb-6">
+              <img src="../assets/services/googlemap.png" class="gmapLogo" />
+              <img
+                src="../assets/services/user.jpg"
+                alt="Harsha S Shanmugam"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <h4 class="font-bold text-base sm:text-lg">
+                  Harsha S Shanmugam
+                </h4>
+                <p class="text-gray-600 text-sm">Local Guide</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
+              Responsiveness, Quality, Professionalism, Value
+            </p>
+            <div class="flex text-yellow-400 text-sm">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto">
+          <form class="bg-white p-6 sm:p-8 rounded-xl card_contact_shadow">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                Get Started Today
+              </h2>
+              <p class="text-gray-600 text-base sm:text-lg">
+                Fill out the form below and our team will get back to you within
+                24 hours
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label class="block text-gray-700 text-sm font-medium mb-2"
+                  >First Name *</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none textBoxGetback"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 text-sm font-medium mb-2"
+                  >Last Name *</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none textBoxGetback"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-medium mb-2"
+                >Email *</label
+              >
+              <input
+                type="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none textBoxGetback"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-medium mb-2"
+                >Service Interest (optional)</label
+              >
+              <select
+                class="Service_dropdown"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none cursor-pointer"
+                required
+              >
+                <option class="dropDownIntrenst" value="">
+                  Select a service
+                </option>
+                <option class="dropDownIntrenst" value="sales">
+                  Product Related
+                </option>
+                <option class="dropDownIntrenst" value="support">
+                  Technical Support
+                </option>
+                <option class="dropDownIntrenst" value="billing">
+                  Installation Related
+                </option>
+                <option class="dropDownIntrenst" value="partnership">
+                  Partnership
+                </option>
+                <option class="dropDownIntrenst" value="partnership">
+                  Other (Specify In Message)
+                </option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-medium mb-2"
+                >Message</label
+              >
+              <textarea
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                placeholder="Enter your message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="button_home_Explore">
+                Submit Inquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>-->
+
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+        >
+          <!-- Logo & Description -->
+          <div>
+            <a
+              href="../index.html"
+              target="_self"
+              class="text-xl sm:text-2xl font-['Pacifico'] mb-4 sm:mb-6 block"
+            >
+              Scitronic
+            </a>
+            <p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">
+              Your trusted partner for comprehensive IT solutions and services.
+            </p>
+            <div class="flex space-x-3 sm:space-x-4">
+              <a
+                href="https://www.facebook.com/www.scitronic.co.in"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-facebook-fill text-lg sm:text-xl"></i>
+              </a>
+              <a href="https://wa.me/+919944825594" class="hover:text-gray-200">
+                <i class="ri-whatsapp-fill text-lg sm:text-xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/scitronic/"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-linkedin-fill text-lg sm:text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="../Aboutus/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="index.html" class="text-gray-300 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Products/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Contactus/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Services
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Computer Sales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Repair Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Data Recovery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Server Maintenance</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Business Hours -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Business Hours
+            </h3>
+            <ul
+              class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-300"
+            >
+              <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+              <li>Saturday: 10:00 AM - 4:00 PM</li>
+              <li>Sunday: Closed</li>
+              <li class="text-white font-medium mt-3 sm:mt-4">
+                24/7 Emergency Support Available
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="border-t border-white/10">
+        <div class="container mx-auto px-1 sm:px-2 py-2 sm:py-3">
+          <p class="text-xs sm:text-sm text-gray-300 text-center">
+            © 2025 Scitronic Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

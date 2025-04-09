@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Solutions & Products | TechSphere</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#04023d", secondary: "#080654" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!--Icons-->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="./index.css" rel="stylesheet"
+  </head>
+  <body>
+    <nav class="bg-white shadow-md py-3 sticky-element">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../index.html" class="text-2xl font-['Pacifico']">Scitronic</a>
+
+        <!-- Menu Links (Desktop) -->
+        <div class="hidden md:flex space-x-8">
+          <div class="container_nav_items">
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../index.html" target="_self">Home</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Services/index.html" target="_self">Services</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="index.html" target="_self">Products</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Aboutus/index.html" target="_self">About Us</a>
+              </button>
+            </div>
+            <div class="nav-item relative">
+              <button class="flex items-center space-x-1 cursor-pointer">
+                <a href="../Contactus/index.html" target="_self">Contact Us</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="hidden md:flex items-center">
+          <!-- Phone Number -->
+          <div class="flex items-center space-x-2">
+            <i class="ri-phone-line"></i>
+            <a href="tel:+9198734 32597"> <span class="text-gray-800 font-medium">+91 98734 32597</span></a>
+          </div>
+
+          <!-- Request Quote Button -->
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Hidden by Default) -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex flex-col px-4 pb-4 bg-white shadow-md"
+      >
+        <a href="../Services/index.html" class="text-gray-700 sm_dev_smallItems"
+          >Services</a
+        >
+        <a href="index.html" class="text-gray-700 sm_dev_smallItems"
+          >Products</a
+        >
+        <a href="../Aboutus/index.html" class="text-gray-700 sm_dev_smallItems"
+          >About Us</a
+        >
+        <a
+          href="../Contactus/index.html"
+          class="text-gray-700 sm_dev_smallItems"
+          >Contact Us</a
+        >
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      class="relative py-12 sm:py-16 lg:py-20 overflow-hidden"
+      style="
+        height: 70vh;
+        background-image: url(../assets/Products/mainbackground.jpg);
+        background-size: cover;
+        background-position: bottom;
+      "
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <!-- Text Content -->
+          <div class="w-full md:w-1/2 mb-8 md:mb-0">
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white leading-tight"
+            >
+              Enterprise IT Solutions
+            </h1>
+            <p
+              class="text-sm sm:text-sm lg:text-base text-white/70 mb-6 sm:mb-8"
+            >
+              Discover our comprehensive range of enterprise-grade IT products
+              and solutions designed to transform your business operations and
+              drive innovation.
+            </p>
+            <div class="flex flex-wrap gap-1 sm:gap-2">
+              <a href="../Contactus/index.html#booknow" class="w-fit">
+                <button class="button_home_Explore">Request Demo</button></a
+              >
+              <button class="ButtonSecond_home">Download Brochure</button>
+            </div>
+          </div>
+
+          <!-- Image Section -->
+          <div class="w-full md:w-1/2 flex justify-center">
+            <img
+              src="../assets/Products/home_main_img.jpg"
+              alt="Enterprise IT Solutions"
+              class="rounded-lg shadow-2xl max-w-full h-auto image_part1_main"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="py-10 sm:py-14 lg:py-16">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-black">
+            Featured Products
+          </h2>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6"
+          >
+            <!-- Product 1 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/9.jpg"
+                alt="Server Maintenance"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Server Maintenance
+                  </h3>
+                  <span
+                    class="bg-[#18b647] text-black px-2 py-0.5 text-[10px] rounded"
+                    >Popular</span
+                  >
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Expert server management and maintenance services.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div
+              class="animationScrollEffect product-card rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/1.webp"
+                alt="Laptop Sales"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Laptop Sales
+                  </h3>
+                  <span
+                    class="bg-[#18b647] text-black px-2 py-0.5 text-[10px] rounded"
+                    >New</span
+                  >
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  High-quality new and 2nd-hand laptops at the best prices.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹29,999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div
+              class="animationScrollEffect product-card rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/2.jpg"
+                alt="Desktop Sale"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-center"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Desktop Sale
+                  </h3>
+                  <span
+                    class="bg-[#18b647] text-black px-2 py-0.5 text-[10px] rounded"
+                    >Popular</span
+                  >
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Custom-built and pre-configured desktop solutions.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹31,999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/3.jpg"
+                alt="Laptop Sales"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base smDev_font_spl font-semibold text-white">
+                    2nd Hand Desktop & Laptop Sales
+                  </h3>
+                  <span
+                    class="bg-[#18b647] text-black px-2 py-0.5 text-[10px] rounded"
+                    >New</span
+                  >
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  High-quality new and 2nd-hand laptops at the best prices.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/4.jpg"
+                alt="CCTV Installation"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    CCTV Installation
+                  </h3>
+                  <span
+                    class="bg-[#18b647] text-black px-2 py-0.5 text-[10px] rounded"
+                    >New</span
+                  >
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Secure your premises with expert camera setup services.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹2,999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/5.jpg"
+                alt="Networking"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Networking & Installation
+                  </h3>
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Complete network setup and installation for businesses.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹9,999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/6.jpg"
+                alt="Software Issue"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Software Problem Resolving
+                  </h3>
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Troubleshooting and fixing software-related issues.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹29,999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/7.jpg"
+                alt="Hard Disk Recovery"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Hard Disk Recovery
+                  </h3>
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Recover lost data with advanced disk recovery techniques.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹2,999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/8.jpg"
+                alt="Bio-Metric Components"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Bio-Metric Components
+                  </h3>
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Advanced biometric security solutions and accessories.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹4,999</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/10.jpg"
+                alt="Bio-Metric Components"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    SD Cards
+                  </h3>
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Wide range of varients available.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹499</span>
+                  <select
+                    class="btn-primary px-3 py-1.5 text-white text-xs smDevProd_dropdown !rounded-button whitespace-nowrap"
+                  >
+                    <option class="text-black">Select Varient</option>
+                    <option class="text-black">128 gb</option>
+                    <option class="text-black">512 gb</option>
+                    <option class="text-black">1 tb</option>
+                  </select>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/11.jpg"
+                alt="Bio-Metric Components"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Clutch Plates
+                  </h3>
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Our service range includes a wide range of All Cables.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">All Cables</span>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div
+              class="animationScrollEffect product-card gradient-bg rounded-md overflow-hidden bg-[#02012a] card_contact_shadow"
+            >
+              <img
+                src="../assets/Products/12.jpg"
+                alt="Bio-Metric Components"
+                class="w-full h-28 sm:h-32 imgae_prod_card object-cover"
+              />
+              <div class="p-1 sm:p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-sm sm:text-base font-semibold text-white">
+                    Solid State Drive or Hard Disk Drive
+                  </h3>
+                </div>
+                <p class="text-white/70 text-xs sm:text-sm mb-2">
+                  Our service range includes a wide range of All Cables.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs font-bold text-white">From ₹999</span>
+                  <select
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button smDevProd_dropdown whitespace-nowrap"
+                  >
+                    <option class="text-black">Select Varient</option>
+                    <option class="text-black">128 gb</option>
+                    <option class="text-black">512 gb</option>
+                    <option class="text-black">1 tb</option>
+                    <option class="text-black">2 tb+</option>
+                  </select>
+                  <a href="../Contactus/index.html#booknow">
+                  <button
+                    class="btn-primary px-3 py-1.5 text-white text-xs !rounded-button whitespace-nowrap"
+                  >
+                    Book Now
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="py-10">
+      <div class="container mx-auto px-4">
+        <div class="mb-8 text-center">
+          <h2 class="text-3xl sm:text-4xl text-black font-bold mb-3">
+            Enterprise Solutions
+          </h2>
+          <p class="text-sm sm:text-base text-black/70 max-w-2xl mx-auto">
+            Comprehensive IT solutions tailored to meet the unique challenges of
+            modern enterprises.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Solution 1 -->
+          <div
+            class="animationScrollEffect glass-effect rounded-lg overflow-hidden bg-[#02012A] card_contact_shadow"
+          >
+            <div class="relative h-40 sm:h-48">
+              <img
+                src="../assets/Products/datacenterSolutions.jpg"
+                alt="Data Center Solutions"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-4"
+              >
+                <h3 class="text-lg sm:text-xl font-semibold text-white">
+                  Data Center Solutions
+                </h3>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5" style="background-color:#02012A;">
+              <p class="text-white/70 text-sm mb-4">
+                Design, implementation, and management of modern data centers
+                with high availability and energy efficiency.
+              </p>
+              <ul class="space-y-2 mb-4 text-sm">
+                <li class="flex items-start">
+                  <div class="w-4 h-4 flex items-center justify-center mr-2">
+                    <i class="ri-check-line text-white text-sm"></i>
+                  </div>
+                  <span class="text-white/80"
+                    >Server and storage infrastructure</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div class="w-4 h-4 flex items-center justify-center mr-2">
+                    <i class="ri-check-line text-white text-sm"></i>
+                  </div>
+                  <span class="text-white/80"
+                    >Power and cooling optimization</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div class="w-4 h-4 flex items-center justify-center mr-2">
+                    <i class="ri-check-line text-white text-sm"></i>
+                  </div>
+                  <span class="text-white/80"
+                    >Virtualization and consolidation</span
+                  >
+                </li>
+              </ul>
+              <a href="../Contactus/index.html#booknow">
+                <button
+                  class="btn-primary px-4 py-2 text-xs text-white font-medium !rounded-button whitespace-nowrap"
+                >
+                  Book a Consultant
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Solution 2 -->
+          <div
+            class="animationScrollEffect glass-effect rounded-lg overflow-hidden bg-[#02012A] card_contact_shadow"
+          >
+            <div class="relative h-40 sm:h-48">
+              <img
+                src="../assets/Products/solution_camera.jpg"
+                alt="Camera Solutions"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-4"
+              >
+                <h3 class="text-lg sm:text-xl font-semibold text-white">
+                  Camera Solutions & Fixing
+                </h3>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5" style="background-color:#02012A;">
+              <p class="text-white/70 text-sm mb-4">
+                Advanced camera solutions for surveillance, monitoring, and
+                security, ensuring seamless operations and safety.
+              </p>
+              <ul class="space-y-2 mb-4 text-sm">
+                <li class="flex items-start">
+                  <div class="w-4 h-4 flex items-center justify-center mr-2">
+                    <i class="ri-check-line text-white text-sm"></i>
+                  </div>
+                  <span class="text-white/80"
+                    >High-resolution surveillance cameras</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <div class="w-4 h-4 flex items-center justify-center mr-2">
+                    <i class="ri-check-line text-white text-sm"></i>
+                  </div>
+                  <span class="text-white/80">Remote monitoring solutions</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-4 h-4 flex items-center justify-center mr-2">
+                    <i class="ri-check-line text-white text-sm"></i>
+                  </div>
+                  <span class="text-white/80"
+                    >Installation and maintenance services</span
+                  >
+                </li>
+              </ul>
+
+              <a href="../Contactus/index.html#booknow">
+                <button
+                  class="btn-primary px-4 py-2 text-xs text-white font-medium !rounded-button whitespace-nowrap"
+                >
+                  Book a Consultant
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-10 bg-[#02012a] relative overflow-hidden">
+      <div
+        class="absolute inset-0"
+        style="
+          background: url('../assets/Products/bookdemo.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      ></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4"
+          >
+            Ready to Transform Your IT Infrastructure?
+          </h2>
+          <p
+            class="text-sm sm:text-base text-white opacity-70 mb-6 max-w-xl mx-auto"
+          >
+            Our enterprise solutions experts are ready to help you find the
+            perfect IT products for your business needs. Schedule a consultation
+            today.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="../Contactus/index.html#booknow">
+              <button class="button_home_Explore w-fit">
+                Schedule Consultation
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+        >
+          <!-- Logo & Description -->
+          <div>
+            <a
+              href="../index.html"
+              target="_self"
+              class="text-xl sm:text-2xl font-['Pacifico'] mb-4 sm:mb-6 block"
+            >
+              Scitronic
+            </a>
+            <p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">
+              Your trusted partner for comprehensive IT solutions and services.
+            </p>
+            <div class="flex space-x-3 sm:space-x-4">
+              <a
+                href="https://www.facebook.com/www.scitronic.co.in"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-facebook-fill text-lg sm:text-xl"></i>
+              </a>
+              <a href="https://wa.me/+919944825594" class="hover:text-gray-200">
+                <i class="ri-whatsapp-fill text-lg sm:text-xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/scitronic/"
+                target="_blank"
+                class="hover:text-gray-200"
+              >
+                <i class="ri-linkedin-fill text-lg sm:text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="../Aboutus/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="index.html" class="text-gray-300 hover:text-white"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Contactus/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Services
+            </h3>
+            <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Computer Sales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Repair Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Data Recovery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../Services/index.html"
+                  class="text-gray-300 hover:text-white"
+                  >Server Maintenance</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Business Hours -->
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Business Hours
+            </h3>
+            <ul
+              class="space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-300"
+            >
+              <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+              <li>Saturday: 10:00 AM - 4:00 PM</li>
+              <li>Sunday: Closed</li>
+              <li class="text-white font-medium mt-3 sm:mt-4">
+                24/7 Emergency Support Available
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="border-t border-white/10">
+        <div class="container mx-auto px-1 sm:px-2 py-2 sm:py-3">
+          <p class="text-xs sm:text-sm text-gray-300 text-center">
+            © 2025 Scitronic Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
