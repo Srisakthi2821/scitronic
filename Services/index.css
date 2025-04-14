@@ -49,6 +49,7 @@
 .container_quotemodal {
   margin-left: 0px;
 }
+
 .sticky-element {
   position: sticky;
   top: 0; /* distance from top before sticking */
@@ -133,6 +134,14 @@
 .container_plans {
   background-image: linear-gradient(to right, #001b3e, #511639);
 }
+.text_tag_smdev{
+  top: 10px!important;
+  right: 10px !important;
+
+}
+.button_home_Explore_buy{
+  width:90%!important;
+}
 .button_home_Explore_buy:hover {
   background-color: #32c75f;
   font-weight: 800;
@@ -145,9 +154,10 @@
 .card_plan_popular {
   background-color: #000000;
   cursor: pointer;
+  color: white;
 }
 .card_plan_popular:hover {
-  transform: translateY(-15px);
+  transform: translateY(-5px);
   box-shadow: #32c75f 0px 5px 27px -5px, #32c75f 0px 0px 16px -8px;
 }
 
@@ -322,6 +332,10 @@ textarea{
   /* plan part*/
   .container_plans {
     background-image: linear-gradient(to right, #001b3e, #511639);
+  }
+  .text_tag_smdev{
+    font-size:8px;
+    padding:0px 8px;
   }
   .button_home_Explore_buy:hover {
     background-color: #32c75f;
